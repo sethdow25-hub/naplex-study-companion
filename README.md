@@ -4,7 +4,7 @@ A 12-week study companion for the North American Pharmacist Licensure Examinatio
 
 ## Use the app
 
-If GitHub Pages is enabled, open the repository's Pages link in a desktop browser or Chrome on Android. On Android, use the browser's **Install app** or **Add to Home screen** option when available.
+Open the [NAPLEX Study Companion](https://sethdow25-hub.github.io/naplex-study-companion/) in a desktop browser or Chrome on Android. On Android, use the browser's **Install app** or **Add to Home screen** option when available.
 
 ## Download and run on Windows
 

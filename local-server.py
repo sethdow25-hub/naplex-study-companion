@@ -14,6 +14,19 @@ PORT = 4173
 
 class AppHandler(SimpleHTTPRequestHandler):
     extensions_map = {**SimpleHTTPRequestHandler.extensions_map, ".webmanifest": "application/manifest+json"}
+    allowed = {"/", "/index.html", "/styles.css", "/content.js", "/extra-content.js",
+               "/app.js", "/sw.js", "/manifest.webmanifest", "/icon.svg",
+               "/icon-192.png", "/icon-512.png"}
+    def do_GET(self):
+        if self.path.split("?", 1)[0] not in self.allowed:
+            self.send_error(404)
+            return
+        super().do_GET()
+    def do_HEAD(self):
+        if self.path.split("?", 1)[0] not in self.allowed:
+            self.send_error(404)
+            return
+        super().do_HEAD()
     def log_message(self, format, *args):
         pass
 
