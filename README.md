@@ -1,6 +1,6 @@
 # NAPLEX Study Companion
 
-A 12-week study companion for the North American Pharmacist Licensure Examination. It includes 60 original review lessons, 156 practice questions with explanations, worked calculations, a five-day checklist for each week, a notebook, and progress tracking.
+A 12-week study companion for the North American Pharmacist Licensure Examination. It includes 60 original review lessons, 189 practice questions with explanations, worked calculations, a five-day checklist for each week, a notebook, and progress tracking.
 
 ## Use the app
 
@@ -26,6 +26,8 @@ For your own deployment, create a Firebase project, enable email/password authen
 
 ## Study sources and scope
 
-The app contains original summaries and questions linked to sources such as NABP, NIH, CDC and FDA. They have not been independently reviewed by a pharmacist or NABP. The app is not an official NABP product or a complete exam review. Clinical recommendations can change, and the notes are not automatically updated. Verify details with current primary sources and drug labels, and use a comprehensive question bank for additional practice.
+The app contains original summaries and questions linked to sources such as NABP, NIH, CDC and FDA. An AI-assisted source check and best-fit blueprint mapping were performed on October 28, 2026; see the [question-by-question audit](content-audit.md). These checks are not an independent pharmacist or NABP review, psychometric validation, or proof of readiness. The app is not an official NABP product or a complete exam review. Medication-use processes and many clinical cases need deeper review. Clinical recommendations can change, and the notes are not automatically updated. Verify details with current primary sources and drug labels, and use a comprehensive question bank for additional practice.
 
-The current [NABP NAPLEX content outline](https://nabp.pharmacy/wp-content/uploads/2024/09/NAPLEX-Content-Outline.pdf) and [candidate bulletin](https://read.nxtbook.com/nabp/bulletin/naplex_mpje_bulletin/) are the primary references for exam content and policies.
+The [NABP NAPLEX content outline](https://nabp.pharmacy/wp-content/uploads/NAPLEX-Content-Outline.pdf) effective May 2025 and [candidate bulletin](https://read.nxtbook.com/nabp/bulletin/naplex_mpje_bulletin/) are the primary references used for exam content and policies. Check for newer versions before a 2027 exam. The app’s scores do not predict exam results.
+
+For maintainers: `audit-data.js` and `content-audit.md` are generated from the original content and the `naplex_*` audit files using `node generate_naplex_audit.cjs`. Re-generating them does not perform a new clinical review; update the evidence and review date only after checking the material again. Run `node validate.cjs`, `node practice.test.cjs`, and `node sync.test.cjs` after changes.
