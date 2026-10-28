@@ -26,7 +26,7 @@
   let state;
   try { state=cleanState(JSON.parse(localStorage.getItem(KEY)||'null')); } catch { state=fresh(); }
   let view='home', selectedWeek=1, tab='lessons', quiz=null, searchValue='', deferredInstall=null;
-  function save(){ try { localStorage.setItem(KEY,JSON.stringify(state)); } catch { /* Reading and practice remain available if storage is unavailable. */ } }
+  function save(){ window.NaplexSync.save(state); }
   function week(n){return DATA.find(w=>w.n===n)||DATA[0];}
   function daysDone(n){return week(n).days.reduce((sum,_,i)=>sum+(state.days[n+'-'+i]?1:0),0);}
   function lessonsDone(n){return week(n).lessons.reduce((sum,_,i)=>sum+(state.lessons[n+'-'+i]?1:0),0);}
@@ -56,7 +56,7 @@
   function layout(content,active=view){
     const titles={home:'Dashboard',plan:'12-week plan',week:'Weekly study',practice:'Practice',notes:'Notebook',settings:'Settings',search:'Search'};
     const navActive=view==='week'?'plan':view;
-    root.innerHTML='<div class="app"><aside class="sidebar"><div class="brand"><span class="brand-icon">✚</span><span class="brand-name">NAPLEX<span style="color:#aad4c8"> Study</span><small>Your study companion</small></span></div><div class="nav-title">Your workspace</div><nav aria-label="Main navigation">'+nav(navActive)+'</nav><div class="sidebar-note"><strong>Made for your next step.</strong>Study a little every day. Your progress stays on this device.<button data-view="settings">Backup &amp; settings →</button></div></aside><div class="main"><header class="mobile-header"><div class="brand"><span class="brand-icon">✚</span><span class="brand-name">NAPLEX Study<small>Your study companion</small></span></div><button data-view="search" aria-label="Search lessons">Search</button></header><header class="topbar"><div class="breadcrumb">Your study space &nbsp;/&nbsp; <strong>'+esc(titles[view])+'</strong></div><div class="top-actions"><button class="button text" data-view="search">'+svg('search')+' <span>Search</span></button><span class="top-date">12-week study plan</span><span class="avatar">NS</span></div></header><main class="content">'+content+'</main></div><nav class="mobile-nav" aria-label="Mobile navigation">'+nav(navActive,true)+'</nav></div>';
+    root.innerHTML='<div class="app"><aside class="sidebar"><div class="brand"><span class="brand-icon">✚</span><span class="brand-name">NAPLEX<span style="color:#aad4c8"> Study</span><small>Your study companion</small></span></div><div class="nav-title">Your workspace</div><nav aria-label="Main navigation">'+nav(navActive)+'</nav><div class="sidebar-note"><strong>Made for your next step.</strong>Study a little every day. Keep your progress close.<button data-view="settings">Backup &amp; settings →</button></div></aside><div class="main"><header class="mobile-header"><div class="brand"><span class="brand-icon">✚</span><span class="brand-name">NAPLEX Study<small>Your study companion</small></span></div><button data-view="search" aria-label="Search lessons">Search</button></header><header class="topbar"><div class="breadcrumb">Your study space &nbsp;/&nbsp; <strong>'+esc(titles[view])+'</strong></div><div class="top-actions"><button class="button text" data-view="search">'+svg('search')+' <span>Search</span></button><span class="top-date">12-week study plan</span><span class="avatar">NS</span></div></header><main class="content">'+content+'</main></div><nav class="mobile-nav" aria-label="Mobile navigation">'+nav(navActive,true)+'</nav></div>';
   }
   function resources(w){return '<div class="panel"><h3>Go deeper</h3><p class="panel-sub">References for this week. Links need an internet connection.</p><div style="height:15px"></div>'+w.sources.map(s=>'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+esc(s.url)+'">'+esc(s.name)+' ↗<span>Open reference</span></a>').join('')+'<p class="small-note">These original notes are a starting point. Verify evolving recommendations with the current source and drug labeling.</p></div>';}
   function panelTitle(title,sub,extra=''){return '<div class="page-head"><div><div class="eyebrow">Your study space</div><h1>'+esc(title)+'</h1><p>'+esc(sub)+'</p></div>'+extra+'</div>';}
@@ -111,8 +111,24 @@
     layout(banner(w)+inside,'plan');
   }
   function practice(){layout(panelTitle('Practice by week','Choose a subject and learn from the explanation after each answer.')+'<div class="week-grid">'+DATA.map(w=>'<button class="week-tile" data-quiz-week="'+w.n+'"><div class="tile-top"><span class="eyebrow">Week '+String(w.n).padStart(2,'0')+'</span><span class="badge">'+(state.scores[w.n]===undefined?w.questions.length+' questions':'Best '+state.scores[w.n]+'/'+w.questions.length)+'</span></div><h3>'+esc(w.title)+'</h3><p>Original questions with answer explanations.</p><div class="tile-foot"><span>'+w.questions.length+' questions</span><span>Start practice →</span></div></button>').join('')+'</div>');}
-  function notes(){const w=week(selectedWeek);layout(panelTitle('Your notebook','Capture reminders and the concepts you want to revisit.')+'<div class="detail-grid"><section class="panel"><div class="panel-head"><div><h2>Week '+w.n+' notes</h2><p class="panel-sub">Changes save automatically on this device.</p></div><select class="week-picker" id="notes-picker" aria-label="Choose week for notes">'+DATA.map(x=>'<option value="'+x.n+'" '+(x.n===w.n?'selected':'')+'>Week '+x.n+' · '+esc(x.title)+'</option>').join('')+'</select></div><textarea class="notebook" id="note" aria-label="Your study notes" placeholder="Write what you want to remember…">'+esc(state.notes[w.n]||'')+'</textarea><p class="small-note">Keep your notes general; avoid storing confidential patient information.</p></section><aside class="detail-aside"><div class="panel"><h3>Make notes useful</h3><p class="small-note">Try recording the concept, why you missed it, and a short reminder to revisit it next week.</p><button class="button secondary small" data-view="settings">Export a backup</button></div></aside></div>');}
-  function settings(){const secure=location.protocol==='https:';const installText=secure?'On Android, open this app in Chrome, then choose <strong>Install app</strong> or <strong>Add to Home screen</strong> in the browser menu. On a computer, use the install option in your browser if available.':'On your computer, a supported browser can offer an install option for the local app. On Android over a local Wi-Fi address, open it in the browser while the computer is running; independent installation and offline access require a secure hosted connection.';layout(panelTitle('Settings & backup','Set your target date and keep a copy of your progress.')+'<div class="settings-grid"><section class="panel"><h2>Exam date</h2><p class="panel-sub">Add a date to place each study week on your calendar. The final week ends on your exam date.</p><label class="field-label" for="exam-date">Target NAPLEX date</label><input class="settings-input" type="date" id="exam-date" value="'+esc(state.examDate)+'"><p class="small-note">'+(state.examDate?'Your target is '+esc(prettyDate(state.examDate))+'.':'You can change this date whenever your plans change.')+'</p><h3 style="margin-top:22px">Using your devices</h3><p class="small-note">'+installText+'</p>'+(deferredInstall?'<button class="button secondary small" data-action="install">Install this app</button>':'')+'</section><section class="panel"><h2>Progress &amp; backup</h2><p class="panel-sub">Progress and notes are stored in this browser on this device. They do not automatically sync across devices.</p><div class="inline-actions"><button class="button" data-action="export">Export backup</button><button class="button secondary" data-action="choose-import">Import backup</button><input id="backup-file" type="file" accept="application/json,.json" hidden></div><p class="small-note">Export a backup on one device and import it on another to transfer your progress. Import replaces the progress stored on this device.</p><p class="small-note">After a successful online visit, supported secure connections and localhost can cache the built-in content for offline use. External source links require internet access.</p></section></div><p class="disclaimer">Independent study material, not an official NABP product. Content was researched October 28, 2026 and is not automatically updated. Use current primary references and the official NAPLEX outline; these notes are not a complete review.</p>');}
+  function notes(){const w=week(selectedWeek);layout(panelTitle('Your notebook','Capture reminders and the concepts you want to revisit.')+'<div class="detail-grid"><section class="panel"><div class="panel-head"><div><h2>Week '+w.n+' notes</h2><p class="panel-sub">Changes save automatically. Sign in to sync across your devices.</p></div><select class="week-picker" id="notes-picker" aria-label="Choose week for notes">'+DATA.map(x=>'<option value="'+x.n+'" '+(x.n===w.n?'selected':'')+'>Week '+x.n+' · '+esc(x.title)+'</option>').join('')+'</select></div><textarea class="notebook" id="note" aria-label="Your study notes" placeholder="Write what you want to remember…">'+esc(state.notes[w.n]||'')+'</textarea><p class="small-note">Keep your notes general; avoid storing confidential patient information.</p></section><aside class="detail-aside"><div class="panel"><h3>Make notes useful</h3><p class="small-note">Try recording the concept, why you missed it, and a short reminder to revisit it next week.</p><button class="button secondary small" data-view="settings">Export a backup</button></div></aside></div>');}
+  function syncPanel(){
+    const info=window.NaplexSync.info();
+    const importButton=window.NaplexSync.canImportGuest()
+      ? '<div class="guest-import"><strong>Already studied on this device?</strong><p class="small-note">Add your device-only progress to this account. Completed items and best scores are combined; different notes are kept together when space permits. Your original device-only copy stays here.</p><button class="button secondary small" data-action="import-guest" '+(info.remoteReady?'':'disabled')+'>Add device progress to my account</button><p class="small-note" id="import-wait">'+(info.remoteReady?'':'Connect to the internet and wait for your account to load first.')+'</p></div>':'';
+    const account=!info.secure
+      ? '<p class="panel-sub">For secure account sign-in on your phone, open the <a href="https://sethdow25-hub.github.io/naplex-study-companion/">published HTTPS app</a>.</p>'
+      : info.signedIn
+      ? '<p class="panel-sub">Signed in as <strong>'+esc(info.email)+'</strong></p><div class="inline-actions"><button class="button secondary" data-action="sync-now">Sync now</button><button class="button secondary" data-action="sign-out">Sign out</button></div>'+importButton
+      : '<p class="panel-sub">Create an account, then sign in with the same email and password on your computer and Android phone. Everyone has their own progress.</p><div class="auth-fields"><div><label class="field-label" for="account-email">Email address</label><input class="settings-input" id="account-email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com"></div><div><label class="field-label" for="account-password">Password</label><input class="settings-input" id="account-password" type="password" autocomplete="current-password" placeholder="At least 8 characters for a new account"></div></div><div class="inline-actions"><button class="button" data-action="sign-in">Sign in</button><button class="button secondary" data-action="create-account">Create account</button><button class="button text" data-action="reset-password">Forgot password?</button></div>';
+    return '<section class="panel sync-panel"><div class="panel-head"><div><div class="eyebrow">Your account</div><h2>Sync your progress</h2></div><span class="sync-indicator">'+(info.signedIn?'Account':'Device only')+'</span></div>'+account+'<p class="sync-status" id="sync-status" role="status">'+esc(info.status)+'</p><p class="small-note" id="sync-result" role="status"></p><p class="small-note">Your account stores your study progress and notes in Google Firebase. The project owner can administer the service. Avoid saving confidential patient information. If the same note is edited on two offline devices, one edit may replace the other.</p></section>';
+  }
+  function settings(){
+    const secure=location.protocol==='https:';
+    const installText=secure?'On Android, open this app in Chrome, then choose <strong>Install app</strong> or <strong>Add to Home screen</strong> in the browser menu. On a computer, use the install option in your browser if available.':'On your computer, a supported browser can offer an install option for the local app. On Android over a local Wi-Fi address, open it in the browser while the computer is running; independent installation and offline access require a secure hosted connection.';
+    layout(panelTitle('Settings & backup','Sign in to sync, set your target date, and keep a backup.')+
+      syncPanel()+'<div class="settings-grid"><section class="panel"><h2>Exam date</h2><p class="panel-sub">Add a date to place each study week on your calendar. The final week ends on your exam date.</p><label class="field-label" for="exam-date">Target NAPLEX date</label><input class="settings-input" type="date" id="exam-date" value="'+esc(state.examDate)+'"><p class="small-note">'+(state.examDate?'Your target is '+esc(prettyDate(state.examDate))+'.':'You can change this date whenever your plans change.')+'</p><h3 style="margin-top:22px">Using your devices</h3><p class="small-note">'+installText+'</p>'+(deferredInstall?'<button class="button secondary small" data-action="install">Install this app</button>':'')+'</section><section class="panel"><h2>Progress &amp; backup</h2><p class="panel-sub">Your progress saves on this device. When signed in, it also syncs with your account whenever you have a connection.</p><div class="inline-actions"><button class="button" data-action="export">Export backup</button><button class="button secondary" data-action="choose-import">Import backup</button><input id="backup-file" type="file" accept="application/json,.json" hidden></div><p class="small-note">Import replaces the progress in the current account or device-only workspace. Keep a backup of anything you want to preserve.</p><p class="small-note">After a successful online visit, supported secure connections and localhost can cache the built-in content for offline use. External source links require internet access.</p></section></div><p class="disclaimer">Independent study material, not an official NABP product. Content was researched October 28, 2026 and is not automatically updated. Use current primary references and the official NAPLEX outline; these notes are not a complete review.</p>');
+  }
   function search(){
     const q=searchValue.trim().toLowerCase();
     let matches=[];
@@ -142,6 +158,33 @@
       else {quiz.index++;quiz.selected=null;quiz.submitted=false;}
       render();return;
     }
+    if(['sign-in','create-account','reset-password','sign-out','sync-now','import-guest'].includes(target.dataset.action)){
+      const action=target.dataset.action;
+      const email=document.getElementById('account-email')?.value||'';
+      const password=document.getElementById('account-password')?.value||'';
+      const result=()=>document.getElementById('sync-result');
+      target.disabled=true;
+      try {
+        if(action==='sign-in') await window.NaplexSync.signIn(email,password);
+        if(action==='create-account') {
+          const verificationSent=await window.NaplexSync.createAccount(email,password);
+          if(result()) result().textContent=verificationSent?'Account created. Check your email for a verification message.':'Account created. You can sign in on your other device.';
+        }
+        if(action==='reset-password') {
+          await window.NaplexSync.resetPassword(email);
+          if(result()) result().textContent='If an account exists for that address, a password reset email will be sent.';
+        }
+        if(action==='sign-out') await window.NaplexSync.signOut();
+        if(action==='sync-now') window.NaplexSync.syncNow();
+        if(action==='import-guest') {
+          if(!window.NaplexSync.importGuest()) throw new Error('Connect to the internet and wait for your account to load before adding device progress.');
+          render();
+          if(result()) result().textContent='Device progress was added to your account.';
+        }
+      } catch(error) { if(result()) result().textContent=window.NaplexSync.describeError(error); }
+      finally { if(target.isConnected) target.disabled=false; }
+      return;
+    }
     if(target.dataset.action==='export'){downloadBackup();return;}
     if(target.dataset.action==='choose-import'){document.getElementById('backup-file').click();return;}
     if(target.dataset.action==='install' && deferredInstall){deferredInstall.prompt();await deferredInstall.userChoice;deferredInstall=null;render();}
@@ -163,5 +206,21 @@
   });
   window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;if(view==='settings')render();});
   if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost' || location.hostname==='127.0.0.1'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+  window.NaplexSync.init(event=>{
+    if(event.type==='user' || event.type==='data'){
+      state=cleanState(event.state);
+      const editingNote=document.activeElement && document.activeElement.id==='note';
+      const editingLogin=document.activeElement && ['account-email','account-password'].includes(document.activeElement.id);
+      if(!(event.type==='data' && editingNote) && !(event.type==='user' && editingLogin && !window.NaplexSync.info().signedIn)) render();
+    }
+    const statusElement=document.getElementById('sync-status');
+    if(statusElement) statusElement.textContent=window.NaplexSync.info().status;
+    const importButton=root.querySelector('[data-action="import-guest"]');
+    if(importButton){
+      importButton.disabled=!window.NaplexSync.info().remoteReady;
+      const wait=document.getElementById('import-wait');
+      if(wait && window.NaplexSync.info().remoteReady) wait.textContent='';
+    }
+  });
   render();
 })();

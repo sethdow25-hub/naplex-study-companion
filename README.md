@@ -16,7 +16,13 @@ To use the local copy on an Android phone, connect the phone and computer to the
 
 ## Progress and privacy
 
-Notes, date and progress are stored in the browser on each device; they do not sync automatically. Use **Settings → Export backup** and **Import backup** to transfer them. Import replaces the receiving browser's progress.
+Study without an account, or open **Settings → Create account** to sync your date, completed days and lessons, best quiz scores, and notes. Sign in with the same email and password on your computer and Android phone. Each person gets a separate account. If you already studied before signing in, choose **Add device progress to my account** once the account has connected.
+
+Progress is also saved on the current device. After the app and account have been opened online, you can continue studying offline; changes are sent when the connection returns. Different items are merged. If the same note is edited on two devices while offline, one edit may replace the other. Use **Settings → Export backup** to keep an additional copy; importing a backup replaces the current workspace and its changes sync when signed in.
+
+Accounts, email addresses, progress, and notes are stored by Google Firebase in the project administered by the app owner. Database rules restrict each signed-in user to their own progress; the project owner can administer the service. Avoid saving confidential patient information. Account sign-in is available on the HTTPS site or a localhost computer; it is disabled on insecure local Wi-Fi addresses. Firebase's no-cost plan has usage limits, so availability may be affected if the shared app exceeds them.
+
+For your own deployment, create a Firebase project, enable email/password authentication, create a Firestore database, apply `firestore.rules`, and replace the public browser configuration in `sync.js` with your project's configuration. Do not publish service-account credentials or other private keys.
 
 ## Study sources and scope
 
