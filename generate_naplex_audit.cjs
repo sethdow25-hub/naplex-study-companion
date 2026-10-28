@@ -6,6 +6,8 @@ const assert = require('node:assert/strict');
 const {sources, questionMap, lessonMap} = require('./naplex_audit_spec.cjs');
 const extra = require('./naplex_extra_practice.cjs');
 const more = require('./naplex_more_practice.cjs');
+const medication = require('./naplex_medication_use.cjs');
+Object.assign(sources, medication.sources);
 const developmentDist = path.join(__dirname, 'naplex-study-app', 'dist');
 const dist = fs.existsSync(developmentDist) ? developmentDist : __dirname;
 const outputs = dist === developmentDist ? path.join(__dirname, '..', 'outputs') : dist;
@@ -82,6 +84,20 @@ for(const w of data){
     delete q.blueprint;delete q.sourceIds;delete q.reviewKind;
     w.questions.push(q);
   }
+  w.medicationFocus=JSON.parse(JSON.stringify(medication.focus[w.n]));
+  assert.ok(w.medicationFocus && w.medicationFocus.points.length && w.medicationFocus.sourceIds.every(id=>sources[id]));
+  assert.equal(medication.questions[w.n].length,4);
+  for(const q0 of medication.questions[w.n]){
+    const q=JSON.parse(JSON.stringify(q0));
+    if(q.calcExpected!==undefined){
+      assert.equal(Number(q.options[q.correct].match(/\d+(?:\.\d+)?/)[0]),q.calcExpected,'Medication-order quantity calculation');
+      assert.equal(q.calcExpected,1*2*30,'Independent quantity check');
+    }
+    assert.ok(q.sourceIds.length && q.sourceIds.every(id=>sources[id]));
+    q.audit={id:`W${String(w.n).padStart(2,'0')}-Q${String(w.questions.length+1).padStart(2,'0')}`,blueprint:q.blueprint,sourceIds:q.sourceIds,kind:q.reviewKind,checked:'2026-10-28'};
+    delete q.blueprint;delete q.sourceIds;delete q.reviewKind;delete q.calcExpected;
+    w.questions.push(q);
+  }
   const answerText=w.math.answer;
   if(w.n===10) assert.ok(answerText.includes('4 percentage points') && answerText.includes('25'));
   else assert.ok(Math.abs(Number(answerText.match(/\d+(?:\.\d+)?/)[0])-mathResults[w.n-1])<1e-8,`Worked calculation mismatch week ${w.n}`);
@@ -95,10 +111,11 @@ const deltas=data.map((w,wi)=>({
   }),
   added:w.questions.slice(13),
   lessons:w.lessons.map((l,i)=>({blueprint:l.blueprint,...(JSON.stringify(l.points)!==JSON.stringify(original[wi].lessons[i].points)?{points:l.points}:{})})),
+  medicationFocus:w.medicationFocus,
   math:w.math,
   sources:w.sources
 }));
-const script=`/* AI-assisted source and blueprint audit; generated 2026-10-28. */\n(function(){\n  const d=${JSON.stringify(deltas)};\n  window.NAPLEX_SOURCES=${JSON.stringify(sources)};\n  window.STUDY_DATA.forEach((w,i)=>{const x=d[i];w.questions.forEach((q,j)=>Object.assign(q,x.questions[j]));w.questions.push(...x.added);w.lessons.forEach((l,j)=>Object.assign(l,x.lessons[j]));w.math=x.math;w.sources=x.sources;});\n})();\n`;
+const script=`/* AI-assisted source and blueprint audit; generated 2026-10-28. */\n(function(){\n  const d=${JSON.stringify(deltas)};\n  window.NAPLEX_SOURCES=${JSON.stringify(sources)};\n  window.STUDY_DATA.forEach((w,i)=>{const x=d[i];w.questions.forEach((q,j)=>Object.assign(q,x.questions[j]));w.questions.push(...x.added);w.lessons.forEach((l,j)=>Object.assign(l,x.lessons[j]));w.medicationFocus=x.medicationFocus;w.math=x.math;w.sources=x.sources;});\n})();\n`;
 fs.writeFileSync(path.join(dist,'audit-data.js'),script,'utf8');
 
 const counts={};for(const w of data)for(const q of w.questions){const k=q.audit.blueprint==='S'?'Supplemental':q.audit.blueprint[0];counts[k]=(counts[k]||0)+1;}
@@ -107,13 +124,15 @@ report.push('# NAPLEX Study Companion: question audit and blueprint map','',
   'Review date: October 28, 2026. The mapping uses the NABP outline effective May 1, 2025; confirm the current outline before a 2027 exam.',
   '', 'This is an AI-assisted source check and a best-fit mapping, not an independent pharmacist or NABP review, psychometric validation, a complete clinical fact check, or evidence of exam readiness. The app is not an NABP product. Source links support the stated concepts, but may not address every distractor or every possible clinical circumstance. Verify current guidelines and product-specific labeling. Mathematical examples are hypothetical, not dosing recommendations.',
   '', '[Official NABP content outline](https://nabp.pharmacy/wp-content/uploads/NAPLEX-Content-Outline.pdf) · [NABP examination format](https://read.nxtbook.com/nabp/bulletin/naplex_mpje_bulletin/what_is_the_naplex.html)',
-  '',`Original questions reviewed: ${originalMetadata.length}. New questions added: ${data.reduce((a,w)=>a+w.questions.length,0)-originalMetadata.length}. Total questions: ${data.reduce((a,w)=>a+w.questions.length,0)}. Lessons mapped: 60. Worked calculations checked: 12.`,
+  '',`Original questions reviewed: ${originalMetadata.length}. New questions added: ${data.reduce((a,w)=>a+w.questions.length,0)-originalMetadata.length}, including 48 medication-use cases. Total questions: ${data.reduce((a,w)=>a+w.questions.length,0)}. Original lessons mapped: 60, plus 12 medication-use focus sections. Worked calculations checked: 12.`,
   '',`Question best-fit counts: foundational knowledge ${counts['1']||0}; medication-use process ${counts['2']||0}; person-centered care ${counts['3']||0}; professional practice ${counts['4']||0}; management/leadership ${counts['5']||0}; supplemental ${counts.Supplemental||0}. These counts are not exam weights and do not establish adequate coverage.`,
-  '', 'The set remains short and repetitive, especially its original weekly calculation drills. Domain 2 remains much thinner than its exam weight, and complex compounding, pharmacokinetics, nutrition, drug development, patient cases, interactions, monitoring, and many disease states need deeper study. A code beside an item means a best-fit topic assignment, not that the subdomain has been mastered or exhaustively covered.',
+  '', 'The 48 new medication-use cases broaden prescription interpretation, product selection, immunization and handling. Their count does not establish blueprint coverage or exam readiness. The original weekly calculation drills remain repetitive, and complex compounding, pharmacokinetics, nutrition, drug development, patient cases, interactions, monitoring, and many disease states need deeper study. A code beside an item means a best-fit topic assignment, not that the subdomain has been mastered or exhaustively covered.',
   '', '## Corrections made','');
 for(const x of changed) report.push(`- **${x.id}:** ${x.reason}`);
 report.push('- Added an outcome and one-year follow-up to the worked risk example. Updated related lesson wording, references, and selected missing topic introductions.','- Marked exam-policy questions and study suggestions as supplemental. The research cited for retrieval practice does not validate a specific error-log format.','', '## Lesson map','');
-for(const w of data){report.push(`### Week ${w.n}: ${w.title}`);for(const l of w.lessons) report.push(`- ${l.title} — ${l.blueprint==='S'?'Supplemental: outside scored outline':`NABP ${l.blueprint}`}`);report.push('');}
+for(const w of data){report.push(`### Week ${w.n}: ${w.title}`);for(const l of w.lessons) report.push(`- ${l.title} — ${l.blueprint==='S'?'Supplemental: outside scored outline':`NABP ${l.blueprint}`}`);report.push(`- Medication-use focus: ${w.medicationFocus.title} — NABP ${w.medicationFocus.blueprint}`);report.push('');}
+report.push('## Medication-use focus sections','');
+for(const w of data){const f=w.medicationFocus;report.push(`### Week ${w.n}: ${f.title} — NABP ${f.blueprint}`,'',f.intro,'');for(const point of f.points)report.push(`- ${point}`);report.push('',`Sources: ${f.sourceIds.map(id=>{const [name,url,section]=sources[id];return `[${name}](${url}) — ${section}`;}).join('; ')}.`,'');}
 report.push('## Question-by-question audit','');
 for(const w of data){report.push(`### Week ${w.n}: ${w.title}`,'');
   for(const q of w.questions){
@@ -126,4 +145,4 @@ for(const w of data){report.push(`### Week ${w.n}: ${w.title}`,'');
 report.push('## Worked calculations','');for(const w of data)report.push(`- Week ${w.n}: ${w.math.prompt} Answer: ${w.math.answer}. Arithmetic independently checked; not a clinical dosing endorsement.`);
 report.push('','## Remaining review','', 'Have qualified pharmacists review every question and lesson, including distractors and patient-specific assumptions. Use fresh, case-based questions and a comprehensive review resource. Check current labels, guidelines, NABP policies and the content outline again before the exam. Scores in this app have not been validated to predict a NAPLEX result.');
 fs.mkdirSync(outputs,{recursive:true});fs.writeFileSync(path.join(dist,'content-audit.md'),report.join('\n')+'\n','utf8');if(outputs!==dist)fs.writeFileSync(path.join(outputs,'NAPLEX Content Audit.md'),report.join('\n')+'\n','utf8');
-console.log(JSON.stringify({original:originalMetadata.length,total:data.reduce((a,w)=>a+w.questions.length,0),lessons:60,changed:changed.length,counts},null,2));
+console.log(JSON.stringify({original:originalMetadata.length,total:data.reduce((a,w)=>a+w.questions.length,0),lessons:60,focusSections:12,medicationCases:48,changed:changed.length,counts},null,2));

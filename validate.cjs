@@ -18,6 +18,10 @@ for(const [i,w] of data.entries()){
   assert.equal(w.days.length,5);
   assert.equal(w.lessons.length,5);
   assert.ok(w.questions.length>=15);
+  assert.ok(w.medicationFocus.title && w.medicationFocus.intro && w.medicationFocus.points.length>=3);
+  assert.ok(w.medicationFocus.sourceIds.length && w.medicationFocus.sourceIds.every(id=>sources[id]));
+  for(const code of w.medicationFocus.blueprint.split(' / '))assert.ok(validCodes.has(code),code);
+  assert.ok(w.questions.filter(q=>q.audit.blueprint.startsWith('2.')).length>=4);
   assert.ok(w.math.prompt && w.math.steps.length && w.math.answer);
   for(const l of w.lessons){assert.ok(l.title && l.intro && l.points.length>=3 && l.points.every(Boolean));for(const code of l.blueprint.split(' / '))assert.ok(validCodes.has(code),code);}
   for(const q of w.questions){
@@ -37,8 +41,8 @@ for(const [i,w] of data.entries()){
   }
   for(const source of w.sources) assert.equal(new URL(source.url).protocol,'https:');
 }
-assert.equal(total,189);
+assert.equal(total,237);
 const manifest=JSON.parse(fs.readFileSync(require('node:path').join(dir,'manifest.webmanifest'),'utf8'));
 for(const icon of manifest.icons) assert.ok(fs.existsSync(require('node:path').join(dir,icon.src)));
 for(const file of ['index.html','styles.css','app.js','content.js','extra-content.js','audit-data.js','content-audit.md','practice-core.js','sw.js']) assert.ok(fs.statSync(require('node:path').join(dir,file)).size>0);
-console.log('Validated 12 weeks, 60 mapped lessons, 189 questions and their source records, 12 worked calculations, and PWA assets.');
+console.log('Validated 12 weeks, 60 mapped lessons, 12 medication-use focus sections, 237 questions and their source records, 12 worked calculations, and PWA assets.');

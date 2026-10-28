@@ -1,6 +1,6 @@
 # NAPLEX Study Companion
 
-A 12-week study companion for the North American Pharmacist Licensure Examination. It includes 60 original review lessons, 189 practice questions with explanations, worked calculations, a five-day checklist for each week, a notebook, and progress tracking.
+A 12-week study companion for the North American Pharmacist Licensure Examination. It includes 60 original review lessons, 12 medication-use focus sections, 237 practice questions with explanations, worked calculations, a five-day checklist for each week, a notebook, and progress tracking.
 
 ## Use the app
 
@@ -18,7 +18,7 @@ To use the local copy on an Android phone, connect the phone and computer to the
 
 Study without an account, or open **Settings → Create account** to sync your date, completed days and lessons, best quiz scores, and notes. Sign in with the same email and password on your computer and Android phone. Each person gets a separate account. If you already studied before signing in, choose **Add device progress to my account** once the account has connected.
 
-Progress is also saved on the current device. After the app and account have been opened online, you can continue studying offline; changes are sent when the connection returns. Different items are merged. If the same note is edited on two devices while offline, one edit may replace the other. Use **Settings → Export backup** to keep an additional copy; importing a backup replaces the current workspace and its changes sync when signed in.
+Progress is also saved on the current device. After the app and account have been opened online, you can continue studying offline; changes are sent when the connection returns. Different items are merged. If the same note is edited on two devices while offline, one edit may replace the other. Focused medication-use quiz scores are not saved; best scores from complete weekly quizzes are saved. Use **Settings → Export backup** to keep an additional copy; importing a backup replaces the current workspace and its changes sync when signed in.
 
 Accounts, email addresses, progress, and notes are stored by Google Firebase in the project administered by the app owner. Database rules restrict each signed-in user to their own progress; the project owner can administer the service. Avoid saving confidential patient information. Account sign-in is available on the HTTPS site or a localhost computer; it is disabled on insecure local Wi-Fi addresses. Firebase's no-cost plan has usage limits, so availability may be affected if the shared app exceeds them.
 
@@ -26,8 +26,8 @@ For your own deployment, create a Firebase project, enable email/password authen
 
 ## Study sources and scope
 
-The app contains original summaries and questions linked to sources such as NABP, NIH, CDC and FDA. An AI-assisted source check and best-fit blueprint mapping were performed on October 28, 2026; see the [question-by-question audit](content-audit.md). These checks are not an independent pharmacist or NABP review, psychometric validation, or proof of readiness. The app is not an official NABP product or a complete exam review. Medication-use processes and many clinical cases need deeper review. Clinical recommendations can change, and the notes are not automatically updated. Verify details with current primary sources and drug labels, and use a comprehensive question bank for additional practice.
+The app contains original summaries and questions linked to sources such as NABP, NIH, CDC and FDA. An AI-assisted source check and best-fit blueprint mapping were performed on October 28, 2026; see the [question-by-question audit](content-audit.md). These checks are not an independent pharmacist or NABP review, psychometric validation, or proof of readiness. The app is not an official NABP product or a complete exam review. Although the medication-use content has been expanded, all domains and many clinical cases need deeper review. Clinical recommendations can change, and the notes are not automatically updated. Verify details with current primary sources and drug labels, and use a comprehensive question bank for additional practice.
 
 The [NABP NAPLEX content outline](https://nabp.pharmacy/wp-content/uploads/NAPLEX-Content-Outline.pdf) effective May 2025 and [candidate bulletin](https://read.nxtbook.com/nabp/bulletin/naplex_mpje_bulletin/) are the primary references used for exam content and policies. Check for newer versions before a 2027 exam. The app’s scores do not predict exam results.
 
-For maintainers: `audit-data.js` and `content-audit.md` are generated from the original content and the `naplex_*` audit files using `node generate_naplex_audit.cjs`. Re-generating them does not perform a new clinical review; update the evidence and review date only after checking the material again. Run `node validate.cjs`, `node practice.test.cjs`, and `node sync.test.cjs` after changes.
+For maintainers: `audit-data.js` and `content-audit.md` are generated from the original content and the `naplex_*` audit files, including `naplex_medication_use.cjs`, using `node generate_naplex_audit.cjs`. Re-generating them does not perform a new clinical review; update the evidence and review date only after checking the material again. Run `node validate.cjs`, `node practice.test.cjs`, and `node sync.test.cjs` after changes.

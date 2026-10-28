@@ -6,11 +6,11 @@ This is an AI-assisted source check and a best-fit mapping, not an independent p
 
 [Official NABP content outline](https://nabp.pharmacy/wp-content/uploads/NAPLEX-Content-Outline.pdf) · [NABP examination format](https://read.nxtbook.com/nabp/bulletin/naplex_mpje_bulletin/what_is_the_naplex.html)
 
-Original questions reviewed: 156. New questions added: 33. Total questions: 189. Lessons mapped: 60. Worked calculations checked: 12.
+Original questions reviewed: 156. New questions added: 81, including 48 medication-use cases. Total questions: 237. Original lessons mapped: 60, plus 12 medication-use focus sections. Worked calculations checked: 12.
 
-Question best-fit counts: foundational knowledge 88; medication-use process 8; person-centered care 70; professional practice 11; management/leadership 7; supplemental 5. These counts are not exam weights and do not establish adequate coverage.
+Question best-fit counts: foundational knowledge 88; medication-use process 56; person-centered care 70; professional practice 11; management/leadership 7; supplemental 5. These counts are not exam weights and do not establish adequate coverage.
 
-The set remains short and repetitive, especially its original weekly calculation drills. Domain 2 remains much thinner than its exam weight, and complex compounding, pharmacokinetics, nutrition, drug development, patient cases, interactions, monitoring, and many disease states need deeper study. A code beside an item means a best-fit topic assignment, not that the subdomain has been mastered or exhaustively covered.
+The 48 new medication-use cases broaden prescription interpretation, product selection, immunization and handling. Their count does not establish blueprint coverage or exam readiness. The original weekly calculation drills remain repetitive, and complex compounding, pharmacokinetics, nutrition, drug development, patient cases, interactions, monitoring, and many disease states need deeper study. A code beside an item means a best-fit topic assignment, not that the subdomain has been mastered or exhaustively covered.
 
 ## Corrections made
 
@@ -35,6 +35,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Medication safety and calculations — NABP 1.C
 - Reading an order safely — NABP 2.A
 - Drug information and dosage forms — NABP 1.F / 2.B
+- Medication-use focus: Interpreting orders and product names — NABP 2.A.1 / 2.A.2 / 2.A.3
 
 ### Week 2: Cardiovascular care
 - Blood pressure and lipids — NABP 3.C
@@ -42,6 +43,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Anticoagulant safety — NABP 3.C.3
 - Heart failure medications — NABP 3.C.2
 - Clot prevention and bleeding — NABP 3.D
+- Medication-use focus: Cardiovascular prescriptions and safety checks — NABP 2.A.2 / 2.A.5 / 2.D
 
 ### Week 3: Endocrine & kidney care
 - Diabetes and insulin — NABP 3.C.2
@@ -49,6 +51,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Thyroid, adrenal and bone health — NABP 3.D
 - Diabetes medication classes — NABP 3.C.2
 - Medication review in kidney disease — NABP 3.C.2
+- Medication-use focus: Insulin and diabetes product checks — NABP 2.A.3 / 2.A.5 / 2.B
 
 ### Week 4: Bacterial infections
 - Choosing and reassessing an antibiotic — NABP 3.C.2
@@ -56,6 +59,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Monitoring and counseling — NABP 3.D
 - Cultures, susceptibility and reassessment — NABP 3.D
 - Antibiotic interactions and safety — NABP 3.C.3
+- Medication-use focus: Antimicrobial order review — NABP 2.A.2 / 2.A.5
 
 ### Week 5: Infections & immunizations
 - HIV treatment principles — NABP 3.C.2
@@ -63,6 +67,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Vaccines and safe administration — NABP 2.C
 - HIV medication interactions — NABP 3.C.3
 - Vaccine workflow — NABP 2.C
+- Medication-use focus: Immunization workflow — NABP 2.C.1 / 2.C.2 / 2.C.3 / 2.C.4 / 2.C.5
 
 ### Week 6: Respiratory, GI & nutrition
 - Asthma and inhaled medications — NABP 3.C.2
@@ -70,6 +75,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Fluids, electrolytes and nutrition — NABP 3.D
 - Reliever and controller concepts — NABP 3.G
 - Fluids and gastrointestinal self-care — NABP 3.F
+- Medication-use focus: Inhaler product and order review — NABP 2.A.2 / 2.A.3 / 2.A.5
 
 ### Week 7: Neurology, psychiatry & pain
 - Antidepressants and antipsychotics — NABP 3.C.2
@@ -77,6 +83,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Pain, opioids and toxicology — NABP 3.C.6
 - Safety in psychiatric treatment — NABP 3.D
 - Opioid safety and overdose — NABP 3.C.6
+- Medication-use focus: High-risk medicines and disposal — NABP 2.A.4 / 2.A.5 / 2.D
 
 ### Week 8: Oncology & immune care
 - Oncology and supportive care — NABP 3.C
@@ -84,6 +91,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Rheumatology and high-risk regimens — NABP 3.C.2
 - Infection risk during cancer treatment — NABP 3.C.5
 - Immunosuppressant and methotrexate safety — NABP 3.C.3
+- Medication-use focus: Methotrexate and transplant product safety — NABP 2.A.2 / 2.A.5 / 2.B / 2.D
 
 ### Week 9: Special populations & self-care
 - Pregnancy and lactation — NABP 3.C
@@ -91,6 +99,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - OTC products and medication access — NABP 3.F
 - Pediatric medication safety — NABP 3.C
 - Medication review in older adults — NABP 3.A
+- Medication-use focus: Pediatric orders, liquids and devices — NABP 2.A.2 / 2.A.3 / 2.D
 
 ### Week 10: Compounding, evidence & process
 - Compounding and product handling — NABP 1.B
@@ -98,6 +107,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Biostatistics and information retrieval — NABP 1.E
 - Concentration and dilution — NABP 1.C.5
 - Comparing risks and trial results — NABP 1.C.8
+- Medication-use focus: Product equivalence and safe notation — NABP 2.A.3 / 2.B / 2.D
 
 ### Week 11: Professional practice & management
 - Reporting and safety — NABP 4.A
@@ -105,6 +115,7 @@ The set remains short and repetitive, especially its original weekly calculation
 - Operations and improvement — NABP 5.A / 5.D
 - From error to improvement — NABP 5.C
 - Professional decisions and communication — NABP 4.D
+- Medication-use focus: Safety programs, recalls and reporting — NABP 2.A.4 / 2.C.5 / 2.D
 
 ### Week 12: Final review & test readiness
 - Put the patient case together — NABP 3.C
@@ -112,6 +123,129 @@ The set remains short and repetitive, especially its original weekly calculation
 - Test-day preparation — Supplemental: outside scored outline
 - A repeatable patient-case method — NABP 3.C
 - Final calculation and exam strategy — NABP 1.C
+- Medication-use focus: Bringing medication-use decisions together — NABP 2.A.2 / 2.A.5 / 2.B / 2.C
+
+## Medication-use focus sections
+
+### Week 1: Interpreting orders and product names — NABP 2.A.1 / 2.A.2 / 2.A.3
+
+Read the complete order and identify the exact product before processing it.
+
+- Compare the generic name, strength, formulation, route, directions, quantity and intended use; clarify contradictions rather than guessing.
+- Immediate-release and extended-release formulations are not automatically interchangeable. Verify the prescribed formulation and its product-specific administration instructions.
+- Check generic equivalence and any applicable substitution requirements. Write units clearly and avoid error-prone abbreviations and decimal notation.
+
+Sources: [FDA: prescription drug labeling](https://www.fda.gov/drugs/fdas-labeling-resources-human-prescription-drugs/frequently-asked-questions-about-labeling-prescription-medicines) — Prescribing information and safety sections; [DailyMed: metoprolol succinate extended-release tablets](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58441cd3-6043-4bb8-adab-1b32a203bfb2) — Dosage form, administration, and warnings; [FDA: generic drug facts](https://www.fda.gov/drugs/generic-drugs/generic-drug-facts) — Generic products, strength, dosage form, and route; [ISMP: error-prone abbreviations and dose designations](https://www.ismp.org/system/files/resources/2024-04/ISMP_ErrorProneAbbreviation_List.pdf) — Units and decimal-point notation.
+
+### Week 2: Cardiovascular prescriptions and safety checks — NABP 2.A.2 / 2.A.5 / 2.D
+
+A dose must fit both the specific product and the patient.
+
+- For apixaban, check the indication and current label: dose adjustments are indication-specific, and age, weight, serum creatinine and interactions may matter.
+- Review relevant safety information, including bleeding risk for anticoagulants and kidney function and potassium for ACE inhibitors.
+- Follow product-specific storage: the cited nitroglycerin sublingual tablet label calls for its original tightly capped glass container.
+
+Sources: [DailyMed: apixaban prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=33752f5d-2ca7-45c0-8292-b54742219b97) — Dosage, renal impairment, bleeding and drug interactions; [DailyMed: lisinopril prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1221d5b1-e131-3866-e054-00144ff8d46c&type=display) — Warnings 5.3 and 5.5, and adverse reactions 6.1; [DailyMed: nitroglycerin sublingual tablets](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=160b85ac-d964-463b-9f1e-1429f14ed318&type=display) — Dosage form and original-container storage.
+
+### Week 3: Insulin and diabetes product checks — NABP 2.A.3 / 2.A.5 / 2.B
+
+Check the exact concentration, device and formulation for each order.
+
+- Insulin products and devices vary in concentration and use. Check the name and label before each administration; follow the instructions for the exact device.
+- Some metformin extended-release products must be swallowed whole. Their labels specify kidney-function contraindications; verify the current label and patient information.
+- A proposed biologic substitution requires verification of the specific product, FDA status, the prescription and applicable state requirements.
+
+Sources: [DailyMed: Toujeo insulin glargine prescribing information](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c9561d96-124d-48ca-982f-0aa1575bff36) — Section 3 and patient information: U-300 and U-100 concentrations; [DailyMed: metformin extended-release tablets](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d9179a8-9579-4804-a4c7-633f37aef1ee) — Administration and renal contraindications; [FDA: biosimilars and interchangeability](https://www.fda.gov/drugs/biosimilars/9-things-know-about-biosimilars-and-interchangeable-biosimilars) — Interchangeability and state pharmacy law.
+
+### Week 4: Antimicrobial order review — NABP 2.A.2 / 2.A.5
+
+Reconcile the order, allergy history and administration instructions.
+
+- Check the drug, indication, dose, route, interval, duration, allergy history and relevant lab data; clarify contradictory directions.
+- Doxycycline absorption can be impaired by certain mineral-containing products. Check the actual product label and the complete medication list.
+- Review an antibiotic order against the current plan and available culture information; changes require an authorized prescriber or applicable protocol.
+
+Sources: [DailyMed: doxycycline prescribing information](https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=763997f0-b35c-43cb-a792-3e0bae589536&type=display) — Drug interactions: antacids and iron; [CDC: penicillin allergy history](https://www.cdc.gov/antibiotic-use/hcp/clinical-signs/) — Questions to ask about the reaction; [CDC: reassess antibiotic therapy](https://www.cdc.gov/antibiotic-use/media/pdfs/Antibiotic-Therapy-Poster-508.pdf) — Reassessing therapy with microbiology and response; [AHRQ: medication reconciliation](https://psnet.ahrq.gov/primer/medication-reconciliation) — Medication discrepancies and reconciliation.
+
+### Week 5: Immunization workflow — NABP 2.C.1 / 2.C.2 / 2.C.3 / 2.C.4 / 2.C.5
+
+Work through screening, preparation, administration and documentation for the specific vaccine.
+
+- Check current recommendations, prior doses, age, relevant contraindications and precautions before each dose.
+- Verify product, expiration, storage, route and any required product-specific diluent. Follow instructions for reconstitution and the usable period.
+- For vaccines covered by the VIS requirement, provide the current VIS before the dose and document the required details. Follow applicable reporting requirements for adverse events.
+
+Sources: [CDC: adult vaccine schedule](https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-schedule-vaccines.html) — Current schedule and notes; [CDC: vaccine contraindications and precautions](https://www.cdc.gov/vaccines/hcp/imz-best-practices/contraindications-precautions.html) — Product-specific screening before vaccination; [CDC: vaccine administration during vaccination](https://www.cdc.gov/vaccines/hcp/administration/during.html) — Product, route, expiration, and administration checks; [CDC: vaccine administration](https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-6-vaccine-administration.html) — Diluents, reconstitution, and time limits; [CDC: instructions for Vaccine Information Statements](https://www.cdc.gov/vaccines/hcp/about-vis/instructions.html) — VIS distribution and documentation for covered vaccines; [CDC: vaccine adverse event reporting](https://www.cdc.gov/vaccine-safety-systems/vaers/) — Reports may be submitted even when causation is uncertain.
+
+### Week 6: Inhaler product and order review — NABP 2.A.2 / 2.A.3 / 2.A.5
+
+An inhaler order needs the right product, directions and device technique.
+
+- Identify the inhaler, strength, device, route, intended role and directions; do not assume devices or formulations work identically.
+- Fluticasone inhalation aerosol is a maintenance product; its cited label recommends rinsing the mouth after inhalation without swallowing.
+- Albuterol inhalation aerosol has a different role. Review symptoms, the prescribed plan, technique and the product label when a regimen seems inconsistent.
+
+Sources: [DailyMed: fluticasone inhalation aerosol](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=27a9b531-f0fd-44ee-b197-ac4b7d64b30c&type=display) — Administration and prevention of oral candidiasis; [DailyMed: albuterol inhalation aerosol](https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fd0389e0-3713-42e0-8ef2-3bb97676fded&version=2) — Indication and administration; [NHLBI: asthma management update](https://www.nhlbi.nih.gov/sites/default/files/publications/AsthmaManagementGuidelinesReport-2-4-21.pdf) — Assessing adherence, technique and environmental factors.
+
+### Week 7: High-risk medicines and disposal — NABP 2.A.4 / 2.A.5 / 2.D
+
+Confirm warnings, monitoring, storage and disposal for the actual medicine.
+
+- Opioids and other central nervous system depressants can produce serious sedation and breathing risks. Assess the combination and communicate concerns.
+- Lithium regimens need individualized review of serum concentrations and kidney function according to the treatment plan.
+- For unwanted medicines, FDA recommends a take-back option for most products; check the specific disposal instructions and applicable local guidance.
+
+Sources: [FDA: opioid and CNS depressant risks](https://www.fda.gov/drugs/information-drug-class/new-safety-measures-announced-opioid-analgesics-prescription-opioid-cough-products-and) — Sedation and respiratory depression; [DailyMed: lithium prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=d20ed2aa-aa56-4709-9e7a-9243c71465c9&type=display) — Serum levels, kidney function and interactions; [FDA: disposal of unused medicines](https://www.fda.gov/consumers/consumer-updates/where-and-how-dispose-unused-medicines) — Take-back programs and product-specific disposal.
+
+### Week 8: Methotrexate and transplant product safety — NABP 2.A.2 / 2.A.5 / 2.B / 2.D
+
+Confirm the regimen and formulation before dispensing a high-risk medicine.
+
+- For methotrexate, verify the indication and exact schedule. Some regimens are weekly; an unintended daily schedule can cause serious harm.
+- Tacrolimus immediate-release and extended-release products are not automatically interchangeable. Check the product label and treatment plan.
+- Methotrexate is a cytotoxic drug; follow applicable workplace handling and disposal procedures, and verify the product’s monitoring requirements.
+
+Sources: [DailyMed: methotrexate prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=09931d44-a3f8-49dc-a3f2-b527ee4214bf) — Non-neoplastic schedules and daily-dosing errors; [DailyMed: methotrexate tablets](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=948e0bab-6524-4b87-9853-1799d4415558&type=display) — Medication errors and special handling; [DailyMed: tacrolimus capsules](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bd447ffa-9196-4c3c-accf-5adf29b84665) — Warnings: not interchangeable with extended-release products; [DailyMed: tacrolimus prescribing information](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f) — Concentration monitoring, renal function and interactions; [CDC NIOSH: hazardous drugs in healthcare](https://www.cdc.gov/niosh/docs/2023-130/default.html) — Workplace risk management and handling practices.
+
+### Week 9: Pediatric orders, liquids and devices — NABP 2.A.2 / 2.A.3 / 2.D
+
+Check the child, the order and the measurable product together.
+
+- Verify a current weight and units when the dose is weight-based, along with the prescribed dose, interval and indication.
+- Check the concentration of the dispensed liquid each time. A changed concentration can change the volume needed for the same dose.
+- Use an appropriately marked oral dosing device. Used needles and other sharps belong in an appropriate sharps container, with disposal following local guidance.
+
+Sources: [AHRQ: weight-based pediatric medication safety](https://psnet.ahrq.gov/web-mm/weighty-mistake) — Accurate weight and units in pediatric dosing; [FDA: children and medicine labels](https://www.fda.gov/drugs/safe-use-over-counter-otc-medicines-children/got-sick-kid-dont-guess-read-label-make-sure-youre-giving-your-children-right-medicine-and-right) — Correct medicine, dose and measuring device; [FDA: oral liquid dosage devices](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/dosage-delivery-devices-orally-ingested-otc-liquid-drug-products) — Calibrated oral dosing devices; [FDA: using and disposing of sharps](https://www.fda.gov/medical-devices/consumer-products/safely-using-sharps-needles-and-syringes-home-work-and-travel) — Dispose of used sharps in an appropriate container.
+
+### Week 10: Product equivalence and safe notation — NABP 2.A.3 / 2.B / 2.D
+
+Use the product-specific source that matches the decision.
+
+- For small-molecule generics, verify strength, route and dosage form. FDA resources can help identify approved products and therapeutic-equivalence information.
+- The FDA Purple Book lists licensed biological products, including biosimilars and interchangeable products. Substitution also depends on applicable state rules and the prescription.
+- Use unambiguous dose notation and follow the product’s actual storage and handling requirements; do not infer stability from appearance.
+
+Sources: [FDA: generic drug facts](https://www.fda.gov/drugs/generic-drugs/generic-drug-facts) — Generic products, strength, dosage form, and route; [FDA: Purple Book information](https://www.fda.gov/drugs/therapeutic-biologics-applications-bla/purple-book-lists-licensed-biological-products-reference-product-exclusivity-and-biosimilarity-or) — FDA-licensed biologic, biosimilar, and interchangeable products; [FDA: biosimilars and interchangeability](https://www.fda.gov/drugs/biosimilars/9-things-know-about-biosimilars-and-interchangeable-biosimilars) — Interchangeability and state pharmacy law; [ISMP: error-prone abbreviations and dose designations](https://www.ismp.org/system/files/resources/2024-04/ISMP_ErrorProneAbbreviation_List.pdf) — Units and decimal-point notation; [FDA: compounding questions and answers](https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers) — FDA approval status and quality.
+
+### Week 11: Safety programs, recalls and reporting — NABP 2.A.4 / 2.C.5 / 2.D
+
+Verify the current safety program and the exact product involved.
+
+- A REMS can impose product-specific requirements. For isotretinoin, use the current iPLEDGE information and verify applicable dispensing requirements rather than relying on old summaries.
+- Read a recall notice carefully and compare product identifiers and lot numbers; follow the notice and organizational procedures.
+- VAERS accepts reports of concerning events after vaccination even when causation is uncertain; some events have mandatory reporting requirements.
+
+Sources: [FDA: iPLEDGE REMS](https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/ipledge-risk-evaluation-and-mitigation-strategy-rems) — Current restricted-distribution program information; [FDA: understanding drug recalls](https://www.fda.gov/drugs/drug-recalls/understanding-drug-recalls-what-know-and-what-do) — Checking recall notices and affected lots; [CDC: vaccine adverse event reporting](https://www.cdc.gov/vaccine-safety-systems/vaers/) — Reports may be submitted even when causation is uncertain.
+
+### Week 12: Bringing medication-use decisions together — NABP 2.A.2 / 2.A.5 / 2.B / 2.C
+
+Use patient information, the order and the product label as one connected review.
+
+- Check the indication, patient and current medication list, directions, strength, quantity, interactions and required monitoring before completing the order.
+- Clarify a discrepancy or potentially unsafe order rather than inventing missing information. A correct calculation does not prove a regimen is clinically appropriate.
+- For substitution or immunization decisions, check the product-specific and current FDA, CDC and jurisdictional requirements.
+
+Sources: [AHRQ: medication reconciliation](https://psnet.ahrq.gov/primer/medication-reconciliation) — Medication discrepancies and reconciliation; [FDA: prescription drug labeling](https://www.fda.gov/drugs/fdas-labeling-resources-human-prescription-drugs/frequently-asked-questions-about-labeling-prescription-medicines) — Prescribing information and safety sections; [FDA: generic drug facts](https://www.fda.gov/drugs/generic-drugs/generic-drug-facts) — Generic products, strength, dosage form, and route; [CDC: adult vaccine schedule](https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-schedule-vaccines.html) — Current schedule and notes.
 
 ## Question-by-question audit
 
@@ -229,6 +363,34 @@ Explanation: Biosimilar and interchangeable-biosimilar determinations are produc
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [FDA: biosimilars and interchangeability](https://www.fda.gov/drugs/biosimilars/9-things-know-about-biosimilars-and-interchangeable-biosimilars) — Interchangeability and state pharmacy law.
 
+**W01-Q17 — NABP 2.A.3**  
+An order says metoprolol 50 mg daily but does not identify the salt or release form. The history lists an extended-release product. What is the best next step?  
+Answer: Clarify the intended product and formulation  
+Explanation: The intended salt and dosage form should be confirmed; product-specific formulations and directions differ.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: metoprolol succinate extended-release tablets](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58441cd3-6043-4bb8-adab-1b32a203bfb2) — Dosage form, administration, and warnings; [FDA: prescription drug labeling](https://www.fda.gov/drugs/fdas-labeling-resources-human-prescription-drugs/frequently-asked-questions-about-labeling-prescription-medicines) — Prescribing information and safety sections.
+
+**W01-Q18 — NABP 2.A.2**  
+A handwritten insulin order includes a dose followed by an unclear “U.” What should the pharmacist do before processing it?  
+Answer: Clarify the dose and document the unit clearly  
+Explanation: “U” is an error-prone abbreviation. Clarify the actual dose and express units unambiguously.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [ISMP: error-prone abbreviations and dose designations](https://www.ismp.org/system/files/resources/2024-04/ISMP_ErrorProneAbbreviation_List.pdf) — Units and decimal-point notation; [DailyMed: insulin glargine prescribing information](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0ad21db3-2b1c-4ed9-a687-bdd6a74d0aae) — Concentration, administration and hypoglycemia warnings.
+
+**W01-Q19 — NABP 2.B**  
+A patient requests a generic for an oral brand-name tablet. Which comparison best supports a product check?  
+Answer: Active ingredient, strength, dosage form and route  
+Explanation: An approved generic is evaluated for relevant sameness, including active ingredient, strength, dosage form and route. Check applicable substitution rules.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: generic drug facts](https://www.fda.gov/drugs/generic-drugs/generic-drug-facts) — Generic products, strength, dosage form, and route.
+
+**W01-Q20 — NABP 2.A.1**  
+An older medication record lists Zestril, while a new record lists lisinopril. Which identification is correct?  
+Answer: Zestril contains lisinopril, an ACE inhibitor  
+Explanation: The cited Zestril label identifies lisinopril as its active ingredient and classifies it as an ACE inhibitor.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: Zestril (lisinopril)](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=838c2d78-d2d8-4981-9ec9-e50ef9e1a5d8) — Generic name and ACE-inhibitor class.
+
 ### Week 2: Cardiovascular care
 
 **W02-Q01 — NABP 3.D.2**  
@@ -342,6 +504,34 @@ Answer: 400 kcal
 Explanation: 100 g × 4 kcal/g = 400 kcal. This exercise does not determine an individual patient’s nutrition needs.  
 Review: Arithmetic independently checked; no clinical dosing validation. Checked 2026-10-28.  
 Sources: [USDA: food and nutrition information](https://www.nal.usda.gov/programs/fnic) — Carbohydrate energy per gram.
+
+**W02-Q17 — NABP 2.A.5**  
+A person with nonvalvular atrial fibrillation is 82 years old, weighs 58 kg and has serum creatinine of 1.6 mg/dL. A new apixaban order is for 5 mg twice daily. What is the best dispensing review?  
+Answer: Verify the indication and contact the prescriber about the dose  
+Explanation: For this indication, the cited apixaban label specifies 2.5 mg twice daily when at least two of the listed age, weight and serum-creatinine criteria are met. Verify the complete patient and product information with the prescriber.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: apixaban prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=33752f5d-2ca7-45c0-8292-b54742219b97) — Dosage, renal impairment, bleeding and drug interactions.
+
+**W02-Q18 — NABP 2.A.2**  
+An apixaban prescription arrives without an indication, and the patient has kidney impairment. Why is the indication needed?  
+Answer: Dosing and assessment can differ by indication and patient factors  
+Explanation: Apixaban labeling distinguishes regimens by indication and patient characteristics. Obtain the missing information and review interactions and kidney function.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: apixaban prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=33752f5d-2ca7-45c0-8292-b54742219b97) — Dosage, renal impairment, bleeding and drug interactions.
+
+**W02-Q19 — NABP 2.D**  
+A patient plans to keep nitroglycerin sublingual tablets in a weekly pill organizer. What does the cited label advise?  
+Answer: Keep them in the original glass container, tightly capped  
+Explanation: The cited nitroglycerin sublingual tablet label specifies the original glass container, tightly capped, to protect potency.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: nitroglycerin sublingual tablets](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=160b85ac-d964-463b-9f1e-1429f14ed318&type=display) — Dosage form and original-container storage.
+
+**W02-Q20 — NABP 2.A.5**  
+A person on lisinopril has a new high potassium result in the pharmacy record. What should the pharmacist do?  
+Answer: Evaluate and communicate the result according to the care plan before continuing routine processing  
+Explanation: ACE inhibitors can affect potassium and kidney function. A concerning result warrants clinical review and communication.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: lisinopril prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1221d5b1-e131-3866-e054-00144ff8d46c&type=display) — Warnings 5.3 and 5.5, and adverse reactions 6.1.
 
 ### Week 3: Endocrine & kidney care
 
@@ -457,6 +647,34 @@ Explanation: The concentration falls from 80 to 40 mg/L after one half-life, the
 Review: Arithmetic independently checked; no clinical dosing validation. Checked 2026-10-28.  
 Sources: [NCBI Bookshelf: elimination half-life](https://www.ncbi.nlm.nih.gov/books/NBK554498/) — First-order half-life and concentration.
 
+**W03-Q17 — NABP 2.A.3**  
+A person has a Toujeo U-300 insulin pen and asks to withdraw a dose from the pen using a U-100 syringe. What does the product label instruct?  
+Answer: Do not withdraw Toujeo from the pen with a syringe  
+Explanation: The cited Toujeo label warns not to use a syringe to remove insulin from the pen because an overdose can result. Follow the device instructions.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: Toujeo insulin glargine prescribing information](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c9561d96-124d-48ca-982f-0aa1575bff36) — Section 3 and patient information: U-300 and U-100 concentrations.
+
+**W03-Q18 — NABP 2.A.5**  
+A new metformin extended-release prescription is received for a patient whose recent eGFR is 25 mL/min/1.73 m². What is the best next step?  
+Answer: Hold processing and discuss the contraindication with the prescriber  
+Explanation: The cited metformin extended-release label contraindicates use when eGFR is below 30 mL/min/1.73 m². Confirm the result and discuss the order with the prescriber.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: metformin extended-release tablets](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d9179a8-9579-4804-a4c7-633f37aef1ee) — Administration and renal contraindications.
+
+**W03-Q19 — NABP 2.A.3**  
+A patient cannot swallow the prescribed metformin extended-release tablet and asks to crush it. What should be done?  
+Answer: Review the label and discuss an appropriate alternative with the prescriber  
+Explanation: The cited extended-release label instructs patients to swallow the tablet whole and not crush, cut or chew it. Discuss an appropriate alternative.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: metformin extended-release tablets](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d9179a8-9579-4804-a4c7-633f37aef1ee) — Administration and renal contraindications.
+
+**W03-Q20 — NABP 2.B**  
+A pharmacy is considering a biosimilar insulin substitution. Which information is necessary?  
+Answer: The specific product’s FDA status, the order and applicable state law  
+Explanation: Biosimilar and interchangeable status is specific to the product; applicable substitution requirements and the prescription also matter.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: biosimilars and interchangeability](https://www.fda.gov/drugs/biosimilars/9-things-know-about-biosimilars-and-interchangeable-biosimilars) — Interchangeability and state pharmacy law; [FDA: Purple Book information](https://www.fda.gov/drugs/therapeutic-biologics-applications-bla/purple-book-lists-licensed-biological-products-reference-product-exclusivity-and-biosimilarity-or) — FDA-licensed biologic, biosimilar, and interchangeable products.
+
 ### Week 4: Bacterial infections
 
 **W04-Q01 — NABP 3.D**  
@@ -570,6 +788,34 @@ Answer: 0.5 g
 Explanation: 0.5% w/v means 0.5 g per 100 mL. This calculation alone does not establish a safe or stable preparation.  
 Review: Arithmetic independently checked; no clinical dosing validation. Checked 2026-10-28.  
 Sources: [OpenStax: dosage calculations](https://openstax.org/books/pharmacology/pages/2-4-dosage-calculations) — Dimensional analysis and dosage calculations; [FDA: compounding questions and answers](https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers) — FDA approval status and quality.
+
+**W04-Q17 — NABP 2.A.5**  
+A patient has a new doxycycline order and takes an iron supplement at the same time. What should the pharmacist review?  
+Answer: The supplement can impair absorption; consult the product-specific instructions  
+Explanation: The cited doxycycline labeling notes impaired absorption with iron and certain antacids. Check product-specific instructions and the patient’s regimen.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: doxycycline prescribing information](https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=763997f0-b35c-43cb-a792-3e0bae589536&type=display) — Drug interactions: antacids and iron.
+
+**W04-Q18 — NABP 2.A.2**  
+An antibiotic prescription is received with directions “twice daily” and “every 8 hours.” What is the safest next step?  
+Answer: Clarify the intended frequency with the prescriber  
+Explanation: Twice daily and every 8 hours are different schedules. Resolve conflicting instructions before processing.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [ISMP: error-prone abbreviations and dose designations](https://www.ismp.org/system/files/resources/2024-04/ISMP_ErrorProneAbbreviation_List.pdf) — Units and decimal-point notation; [FDA: prescription drug labeling](https://www.fda.gov/drugs/fdas-labeling-resources-human-prescription-drugs/frequently-asked-questions-about-labeling-prescription-medicines) — Prescribing information and safety sections.
+
+**W04-Q19 — NABP 2.A.5**  
+A patient reports a previous serious reaction to an antibiotic, but the order does not include the allergy details. What should be done?  
+Answer: Clarify the drug, reaction and timing before completing the review  
+Explanation: The specific medication and nature and timing of the reaction help the care team evaluate an allergy report.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [CDC: penicillin allergy history](https://www.cdc.gov/antibiotic-use/hcp/clinical-signs/) — Questions to ask about the reaction.
+
+**W04-Q20 — NABP 2.A.2**  
+A discharge list and a new antibiotic prescription show different durations. Which action fits medication-order review?  
+Answer: Reconcile the discrepancy and clarify the intended duration  
+Explanation: A disagreement between medication sources is a discrepancy to reconcile with the appropriate care team.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [AHRQ: medication reconciliation](https://psnet.ahrq.gov/primer/medication-reconciliation) — Medication discrepancies and reconciliation; [CDC: reassess antibiotic therapy](https://www.cdc.gov/antibiotic-use/media/pdfs/Antibiotic-Therapy-Poster-508.pdf) — Reassessing therapy with microbiology and response.
 
 ### Week 5: Infections & immunizations
 
@@ -685,6 +931,34 @@ Explanation: Follow the facility’s excursion procedure and obtain guidance fro
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [CDC: vaccine storage and handling](https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-5-vaccine-storage-and-handling.html) — Product instructions and temperature excursions.
 
+**W05-Q17 — NABP 2.C.2**  
+A patient reports anaphylaxis immediately after a previous dose of the same vaccine. What should occur before another dose?  
+Answer: Treat the history as a potential contraindication and evaluate it  
+Explanation: A severe allergic reaction after a prior dose can be a contraindication. Check the specific vaccine and current guidance.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [CDC: vaccine contraindications and precautions](https://www.cdc.gov/vaccines/hcp/imz-best-practices/contraindications-precautions.html) — Product-specific screening before vaccination.
+
+**W05-Q18 — NABP 2.C.3**  
+A vaccine vial has passed the expiration date printed by its manufacturer. What should the vaccinator do?  
+Answer: Do not administer the expired vaccine  
+Explanation: CDC advises against using expired vaccine, diluent or equipment. Follow the site’s handling and disposal procedures.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [CDC: vaccine administration during vaccination](https://www.cdc.gov/vaccines/hcp/administration/during.html) — Product, route, expiration, and administration checks.
+
+**W05-Q19 — NABP 2.C**  
+Before a tetanus-containing vaccine covered by the VIS requirement is given, which action is appropriate?  
+Answer: Provide the current VIS and document the required information  
+Explanation: For covered vaccines, CDC describes providing the current VIS before each dose and recording required information, including VIS and vaccine details.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [CDC: instructions for Vaccine Information Statements](https://www.cdc.gov/vaccines/hcp/about-vis/instructions.html) — VIS distribution and documentation for covered vaccines.
+
+**W05-Q20 — NABP 2.C.4**  
+A lyophilized vaccine requires reconstitution. Which diluent should be used?  
+Answer: The specific diluent supplied for that vaccine, following manufacturer instructions  
+Explanation: CDC says to use the manufacturer-supplied, product-specific diluent and follow the vaccine’s reconstitution and use instructions.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [CDC: vaccine administration](https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-6-vaccine-administration.html) — Diluents, reconstitution, and time limits.
+
 ### Week 6: Respiratory, GI & nutrition
 
 **W06-Q01 — NABP 3.E.2**  
@@ -791,6 +1065,34 @@ Answer: Check the person’s device technique; Review whether the medicine is be
 Explanation: Technique and adherence affect treatment. Follow the specific product’s instructions; fluticasone labeling advises rinsing the mouth after use.  
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [NHLBI: asthma management update](https://www.nhlbi.nih.gov/sites/default/files/publications/AsthmaManagementGuidelinesReport-2-4-21.pdf) — Assessing adherence, technique and environmental factors; [DailyMed: fluticasone inhalation aerosol](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=27a9b531-f0fd-44ee-b197-ac4b7d64b30c&type=display) — Administration and prevention of oral candidiasis.
+
+**W06-Q16 — NABP 2.A.2**  
+A patient uses fluticasone inhalation aerosol every day. What administration instruction appears in the cited label?  
+Answer: Rinse the mouth with water after inhalation without swallowing  
+Explanation: The cited label advises rinsing the mouth without swallowing after use to reduce the risk of local oral candidiasis.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: fluticasone inhalation aerosol](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=27a9b531-f0fd-44ee-b197-ac4b7d64b30c&type=display) — Administration and prevention of oral candidiasis.
+
+**W06-Q17 — NABP 2.A.5**  
+A new order describes albuterol inhalation aerosol as the patient’s sole long-term asthma control plan. Symptoms remain frequent. What should be reviewed?  
+Answer: The prescribed plan, symptoms, technique and need to discuss control with the prescriber  
+Explanation: Albuterol has a quick-relief role; frequent symptoms warrant assessment of the plan, technique and adherence with the care team.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: albuterol inhalation aerosol](https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fd0389e0-3713-42e0-8ef2-3bb97676fded&version=2) — Indication and administration; [NHLBI: asthma management update](https://www.nhlbi.nih.gov/sites/default/files/publications/AsthmaManagementGuidelinesReport-2-4-21.pdf) — Assessing adherence, technique and environmental factors.
+
+**W06-Q18 — NABP 2.A.3**  
+A patient receives a different inhaler device and says all inhalers are used identically. What is the best response?  
+Answer: Review and demonstrate the technique for the actual device  
+Explanation: Technique is device-specific. Review the product’s instructions and assess how the person uses the actual inhaler.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [NHLBI: asthma management update](https://www.nhlbi.nih.gov/sites/default/files/publications/AsthmaManagementGuidelinesReport-2-4-21.pdf) — Assessing adherence, technique and environmental factors; [DailyMed: fluticasone inhalation aerosol](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=27a9b531-f0fd-44ee-b197-ac4b7d64b30c&type=display) — Administration and prevention of oral candidiasis.
+
+**W06-Q19 — NABP 2.A.2**  
+An inhaler order lists a drug and strength but no frequency. What should the pharmacist do?  
+Answer: Clarify the missing directions using the prescriber’s order and the product information  
+Explanation: A complete order needs the intended directions. Clarify missing information rather than assuming the regimen.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: prescription drug labeling](https://www.fda.gov/drugs/fdas-labeling-resources-human-prescription-drugs/frequently-asked-questions-about-labeling-prescription-medicines) — Prescribing information and safety sections; [DailyMed: fluticasone inhalation aerosol](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=27a9b531-f0fd-44ee-b197-ac4b7d64b30c&type=display) — Administration and prevention of oral candidiasis.
 
 ### Week 7: Neurology, psychiatry & pain
 
@@ -899,6 +1201,34 @@ Explanation: Naloxone can temporarily reverse opioid effects, but emergency help
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [CDC: respond to suspected overdose](https://www.cdc.gov/stop-overdose/response/) — Naloxone and emergency response.
 
+**W07-Q16 — NABP 2.A.4**  
+A patient has prescriptions for an opioid and a benzodiazepine from different clinicians. Which concern needs review?  
+Answer: Potential additive sedation and respiratory depression  
+Explanation: FDA warns that combined opioid and benzodiazepine use can cause serious sedation and respiratory depression. Review the regimen and communicate with the care team.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: opioid and CNS depressant risks](https://www.fda.gov/drugs/information-drug-class/new-safety-measures-announced-opioid-analgesics-prescription-opioid-cough-products-and) — Sedation and respiratory depression.
+
+**W07-Q17 — NABP 2.D**  
+A patient asks what to do with unwanted medication. What is an appropriate starting point?  
+Answer: Use a drug take-back option when available and check product-specific disposal instructions  
+Explanation: FDA recommends take-back options for most unwanted medicines. If one is unavailable, follow the specific FDA and local disposal guidance.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: disposal of unused medicines](https://www.fda.gov/consumers/consumer-updates/where-and-how-dispose-unused-medicines) — Take-back programs and product-specific disposal.
+
+**W07-Q18 — NABP 2.A.5**  
+A lithium refill is requested, and the available record lacks recent monitoring information. Which step is appropriate?  
+Answer: Review the treatment plan for serum concentration and kidney-function monitoring  
+Explanation: Lithium requires individualized monitoring, including serum concentrations and kidney function, according to the clinical plan and current labeling.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: lithium prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=d20ed2aa-aa56-4709-9e7a-9243c71465c9&type=display) — Serum levels, kidney function and interactions.
+
+**W07-Q19 — NABP 2.A.4**  
+A prescription includes a boxed warning about combined sedating medicines. What is the best use of that warning?  
+Answer: Review the specific risk, the patient’s other medicines and the prescriber’s plan  
+Explanation: A boxed warning is an important product-specific safety signal. Assess it in the full medication and patient context.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: prescription drug labeling](https://www.fda.gov/drugs/fdas-labeling-resources-human-prescription-drugs/frequently-asked-questions-about-labeling-prescription-medicines) — Prescribing information and safety sections; [FDA: opioid and CNS depressant risks](https://www.fda.gov/drugs/information-drug-class/new-safety-measures-announced-opioid-analgesics-prescription-opioid-cough-products-and) — Sedation and respiratory depression.
+
 ### Week 8: Oncology & immune care
 
 **W08-Q01 — NABP 3.C.5**  
@@ -1006,6 +1336,34 @@ Explanation: Some non-neoplastic regimens are weekly, and inadvertent daily use 
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [DailyMed: methotrexate prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=09931d44-a3f8-49dc-a3f2-b527ee4214bf) — Non-neoplastic schedules and daily-dosing errors.
 
+**W08-Q16 — NABP 2.A.2**  
+A new methotrexate prescription for a non-oncology condition says “daily,” while the care plan indicates a weekly regimen. What should happen?  
+Answer: Clarify the indication and schedule before processing  
+Explanation: Some non-oncology methotrexate regimens are weekly, and daily-versus-weekly errors can be fatal. Verify the specific plan.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: methotrexate prescribing information](https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=09931d44-a3f8-49dc-a3f2-b527ee4214bf) — Non-neoplastic schedules and daily-dosing errors; [DailyMed: methotrexate tablets](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=948e0bab-6524-4b87-9853-1799d4415558&type=display) — Medication errors and special handling.
+
+**W08-Q17 — NABP 2.B**  
+An immediate-release tacrolimus product is unavailable, and an extended-release product is on the shelf. What should the pharmacy do?  
+Answer: Consult the prescriber and current product guidance before any change  
+Explanation: The cited tacrolimus capsule label states that immediate-release and extended-release products are not interchangeable or substitutable.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: tacrolimus capsules](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bd447ffa-9196-4c3c-accf-5adf29b84665) — Warnings: not interchangeable with extended-release products.
+
+**W08-Q18 — NABP 2.A.5**  
+A tacrolimus refill record shows a new interacting medicine and no recent level in the available chart. What is useful to review?  
+Answer: The current interaction, drug concentration and kidney-function monitoring plan  
+Explanation: Tacrolimus exposure can be affected by interactions, and concentration and kidney-function monitoring may be needed.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: tacrolimus prescribing information](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f) — Concentration monitoring, renal function and interactions.
+
+**W08-Q19 — NABP 2.D**  
+A pharmacy is preparing to handle a methotrexate tablet product. Which source should guide special handling?  
+Answer: Applicable hazardous-drug procedures and the product label  
+Explanation: The cited methotrexate label identifies it as cytotoxic and directs users to follow applicable special handling and disposal procedures.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: methotrexate tablets](https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=948e0bab-6524-4b87-9853-1799d4415558&type=display) — Medication errors and special handling; [CDC NIOSH: hazardous drugs in healthcare](https://www.cdc.gov/niosh/docs/2023-130/default.html) — Workplace risk management and handling practices.
+
 ### Week 9: Special populations & self-care
 
 **W09-Q01 — NABP 1.C.1**  
@@ -1112,6 +1470,34 @@ Answer: Verify the current weight and units when weight matters; Check the presc
 Explanation: Check the patient, dose, concentration, and measuring device. A marked oral dosing device is more appropriate than an unmarked household spoon.  
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [FDA: children and medicine labels](https://www.fda.gov/drugs/safe-use-over-counter-otc-medicines-children/got-sick-kid-dont-guess-read-label-make-sure-youre-giving-your-children-right-medicine-and-right) — Correct medicine, dose and measuring device; [FDA: oral liquid dosage devices](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/dosage-delivery-devices-orally-ingested-otc-liquid-drug-products) — Calibrated oral dosing devices; [AHRQ: weight-based pediatric medication safety](https://psnet.ahrq.gov/web-mm/weighty-mistake) — Accurate weight and units in pediatric dosing.
+
+**W09-Q16 — NABP 2.A.2**  
+A pediatric prescription uses mg/kg dosing, but the most recent weight is missing and the old chart lists pounds. What should the pharmacist do?  
+Answer: Obtain and verify a current weight and its units  
+Explanation: Accurate, current weight and units are essential inputs for a weight-based pediatric order. Verify the patient and the regimen.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [AHRQ: weight-based pediatric medication safety](https://psnet.ahrq.gov/web-mm/weighty-mistake) — Accurate weight and units in pediatric dosing.
+
+**W09-Q17 — NABP 2.A.3**  
+A child’s refill contains a different liquid concentration than before. What should be verified?  
+Answer: The prescribed mg dose, new concentration and corresponding measuring instructions  
+Explanation: The volume can change when concentration changes. Verify the prescribed dose, product strength and directions before use.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: children and medicine labels](https://www.fda.gov/drugs/safe-use-over-counter-otc-medicines-children/got-sick-kid-dont-guess-read-label-make-sure-youre-giving-your-children-right-medicine-and-right) — Correct medicine, dose and measuring device; [FDA: oral liquid dosage devices](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/dosage-delivery-devices-orally-ingested-otc-liquid-drug-products) — Calibrated oral dosing devices.
+
+**W09-Q18 — NABP 2.A.3**  
+A caregiver needs to measure a small oral liquid dose. Which device is most appropriate?  
+Answer: An oral dosing syringe with suitable markings  
+Explanation: A suitably marked oral dosing device allows measurement in the intended units; avoid unmarked household spoons.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: oral liquid dosage devices](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/dosage-delivery-devices-orally-ingested-otc-liquid-drug-products) — Calibrated oral dosing devices; [FDA: children and medicine labels](https://www.fda.gov/drugs/safe-use-over-counter-otc-medicines-children/got-sick-kid-dont-guess-read-label-make-sure-youre-giving-your-children-right-medicine-and-right) — Correct medicine, dose and measuring device.
+
+**W09-Q19 — NABP 2.D**  
+A caregiver has just used a needle for an injection. What should happen next?  
+Answer: Place it immediately in an appropriate sharps disposal container  
+Explanation: FDA recommends placing used sharps immediately in a sharps container and following local disposal instructions.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: using and disposing of sharps](https://www.fda.gov/medical-devices/consumer-products/safely-using-sharps-needles-and-syringes-home-work-and-travel) — Dispose of used sharps in an appropriate container.
 
 ### Week 10: Compounding, evidence & process
 
@@ -1226,6 +1612,34 @@ Answer: The formulation and compatibility; Applicable standards and appropriate 
 Explanation: A calculation or a clear appearance cannot establish sterility. Use applicable current standards and product-specific information.  
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [FDA: compounding questions and answers](https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers) — FDA approval status and quality; [FDA: insanitary conditions in compounding](https://www.fda.gov/media/124948/download) — Contamination risks and management controls.
+
+**W10-Q17 — NABP 2.A.2**  
+An order is written “.5 mg,” and the pharmacy is rewriting it after clarification. Which notation is safer?  
+Answer: 0.5 mg  
+Explanation: A leading zero makes the decimal point easier to see. Verify the intended dose; avoid error-prone notation.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [ISMP: error-prone abbreviations and dose designations](https://www.ismp.org/system/files/resources/2024-04/ISMP_ErrorProneAbbreviation_List.pdf) — Units and decimal-point notation.
+
+**W10-Q18 — NABP 2.B**  
+Which FDA resource is relevant when checking whether a biological product has a biosimilar or interchangeable evaluation?  
+Answer: The Purple Book  
+Explanation: The FDA Purple Book lists licensed biological products, including biosimilar and interchangeable products. Check the specific product and applicable law.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: Purple Book information](https://www.fda.gov/drugs/therapeutic-biologics-applications-bla/purple-book-lists-licensed-biological-products-reference-product-exclusivity-and-biosimilarity-or) — FDA-licensed biologic, biosimilar, and interchangeable products; [FDA: biosimilars and interchangeability](https://www.fda.gov/drugs/biosimilars/9-things-know-about-biosimilars-and-interchangeable-biosimilars) — Interchangeability and state pharmacy law.
+
+**W10-Q19 — NABP 2.A.3**  
+Two oral products have the same drug name and strength, but one is extended-release and the other is immediate-release. What should be done?  
+Answer: Verify the prescribed dosage form and any proposed substitution  
+Explanation: Dosage form and release characteristics matter. Check the order, product-specific information and applicable substitution requirements.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [DailyMed: metoprolol succinate extended-release tablets](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58441cd3-6043-4bb8-adab-1b32a203bfb2) — Dosage form, administration, and warnings; [FDA: generic drug facts](https://www.fda.gov/drugs/generic-drugs/generic-drug-facts) — Generic products, strength, dosage form, and route.
+
+**W10-Q20 — NABP 2.D**  
+A compounded preparation has unclear storage instructions. Which is the best response?  
+Answer: Consult the applicable formulation, stability and storage references before assigning instructions  
+Explanation: Storage and stability are formulation-specific. Use applicable current standards and references rather than guessing from appearance.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: compounding questions and answers](https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers) — FDA approval status and quality.
 
 ### Week 11: Professional practice & management
 
@@ -1355,6 +1769,34 @@ Explanation: Specific, timely, actionable feedback and opportunities to practice
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [Pharmacy education: feedback study](https://pmc.ncbi.nlm.nih.gov/articles/PMC8006482/) — Specific, timely feedback in pharmacy training.
 
+**W11-Q19 — NABP 2.A.4**  
+A pharmacy receives an isotretinoin order. What should it check regarding restricted distribution?  
+Answer: The current iPLEDGE REMS and product-specific requirements  
+Explanation: Isotretinoin is subject to the iPLEDGE REMS. Requirements can change, so consult the current FDA and program information.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: iPLEDGE REMS](https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/ipledge-risk-evaluation-and-mitigation-strategy-rems) — Current restricted-distribution program information.
+
+**W11-Q20 — NABP 2.C.5**  
+A vaccine recipient has a concerning event after vaccination, but the cause is uncertain. Which statement is correct?  
+Answer: VAERS accepts reports even when the reporter is unsure of causation  
+Explanation: VAERS accepts reports even when causation is uncertain. Certain events have mandatory reporting requirements.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [CDC: vaccine adverse event reporting](https://www.cdc.gov/vaccine-safety-systems/vaers/) — Reports may be submitted even when causation is uncertain.
+
+**W11-Q21 — NABP 2.D**  
+A pharmacy learns about a drug recall. How should it determine whether a stocked bottle is affected?  
+Answer: Compare the specific product and lot with the recall notice  
+Explanation: The specific recall notice identifies the affected product and lots and gives relevant instructions.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: understanding drug recalls](https://www.fda.gov/drugs/drug-recalls/understanding-drug-recalls-what-know-and-what-do) — Checking recall notices and affected lots.
+
+**W11-Q22 — NABP 2.A.5**  
+A patient is prescribed an opioid together with another sedating medicine. What should the pharmacist review?  
+Answer: The product warnings, patient context and prescribers’ plan  
+Explanation: Review product warnings and additive sedation and respiratory-depression risks in the context of the complete regimen.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: opioid and CNS depressant risks](https://www.fda.gov/drugs/information-drug-class/new-safety-measures-announced-opioid-analgesics-prescription-opioid-cough-products-and) — Sedation and respiratory depression; [FDA: prescription drug labeling](https://www.fda.gov/drugs/fdas-labeling-resources-human-prescription-drugs/frequently-asked-questions-about-labeling-prescription-medicines) — Prescribing information and safety sections.
+
 ### Week 12: Final review & test readiness
 
 **W12-Q01 — Supplemental**  
@@ -1461,6 +1903,34 @@ Answer: The medication list and actual use; The nature of a reported allergy; Ki
 Explanation: The patient’s medicines, allergy history and relevant organ function all inform medication assessment.  
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
 Sources: [AHRQ: patient medication interview](https://www.ahrq.gov/patient-safety/settings/hospital/match/figure-9.html) — Medication information to obtain or verify; [CDC: penicillin allergy history](https://www.cdc.gov/antibiotic-use/hcp/clinical-signs/) — Questions to ask about the reaction; [NIDDK: factors affecting eGFR accuracy](https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/factors-affecting-egfr-accuracy) — eGFR is an estimate and has limitations.
+
+**W12-Q16 — NABP 2.A.2**  
+A medication list and a refill request disagree about the dose of a chronic medicine. Which step belongs in order review?  
+Answer: Reconcile actual use and clarify the current prescribed dose  
+Explanation: Medication reconciliation includes clarifying what the patient actually takes and resolving discrepancies with the care team.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [AHRQ: medication reconciliation](https://psnet.ahrq.gov/primer/medication-reconciliation) — Medication discrepancies and reconciliation.
+
+**W12-Q17 — NABP 2.A.2**  
+An order is for one tablet twice daily for 30 days. Which quantity supplies the stated course?  
+Answer: 60 tablets  
+Explanation: One tablet × two doses per day × 30 days = 60 tablets. This verifies quantity only, not clinical appropriateness.  
+Review: Arithmetic independently checked; no clinical dosing validation. Checked 2026-10-28.  
+Sources: [OpenStax: dosage calculations](https://openstax.org/books/pharmacology/pages/2-4-dosage-calculations) — Dimensional analysis and dosage calculations.
+
+**W12-Q18 — NABP 2.B**  
+The pharmacy is considering a generic substitution. Which combination should be verified?  
+Answer: The prescribed ingredient, strength, route, formulation and applicable substitution rules  
+Explanation: Verify the product and relevant equivalence information, as well as the prescription and applicable requirements.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [FDA: generic drug facts](https://www.fda.gov/drugs/generic-drugs/generic-drug-facts) — Generic products, strength, dosage form, and route.
+
+**W12-Q19 — NABP 2.C.1**  
+A patient requests a vaccine but has an uncertain vaccination record. What is the best first review?  
+Answer: Check available records and current CDC schedule notes for that vaccine  
+Explanation: Review available vaccination records and the current schedule, including age, indications and interval guidance for the specific vaccine.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [CDC: adult vaccine schedule](https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-schedule-vaccines.html) — Current schedule and notes; [CDC: before administering vaccines](https://www.cdc.gov/vaccines/hcp/administration/before.html) — History, indications, contraindications and precautions.
 
 ## Worked calculations
 
