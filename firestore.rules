@@ -1,6 +1,7 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    // Existing weekly progress remains in /progress/{userId} for older clients.
     match /progress/{userId} {
       function isOwner() {
         return request.auth != null && request.auth.uid == userId;
@@ -12,6 +13,31 @@ service cloud.firestore {
         && request.resource.data.version == 2
         && request.resource.data.records is map
         && request.resource.data.records.size() <= 150;
+    }
+    // Medication-use best scores live separately so older clients cannot erase them.
+    // Each user may store at most one integer score per study week.
+    match /medicationScores/{userId} {
+      function isOwner() {
+        return request.auth != null && request.auth.uid == userId;
+      }
+      function validScore(scores, week) {
+        return !(week in scores) || (scores[week] is int && scores[week] >= 0 && scores[week] <= 100);
+      }
+      function validScores(data) {
+        return data.keys().hasAll(['version', 'scores'])
+          && data.keys().hasOnly(['version', 'scores'])
+          && data.version == 1
+          && data.scores is map
+          && data.scores.keys().hasOnly(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'])
+          && validScore(data.scores, '1') && validScore(data.scores, '2')
+          && validScore(data.scores, '3') && validScore(data.scores, '4')
+          && validScore(data.scores, '5') && validScore(data.scores, '6')
+          && validScore(data.scores, '7') && validScore(data.scores, '8')
+          && validScore(data.scores, '9') && validScore(data.scores, '10')
+          && validScore(data.scores, '11') && validScore(data.scores, '12');
+      }
+      allow read, delete: if isOwner();
+      allow create, update: if isOwner() && validScores(request.resource.data);
     }
   }
 }

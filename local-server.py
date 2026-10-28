@@ -16,7 +16,7 @@ class AppHandler(SimpleHTTPRequestHandler):
     extensions_map = {**SimpleHTTPRequestHandler.extensions_map, ".webmanifest": "application/manifest+json"}
     allowed = {"/", "/index.html", "/styles.css", "/content.js", "/extra-content.js",
                "/audit-data.js", "/content-audit.md", "/practice-core.js",
-               "/app.js", "/sync-core.js", "/sync.js", "/sw.js", "/manifest.webmanifest", "/icon.svg",
+               "/app.js", "/sync-core.js", "/focus-core.js", "/sync.js", "/sw.js", "/manifest.webmanifest", "/icon.svg",
                "/icon-192.png", "/icon-512.png"}
     def do_GET(self):
         if self.path.split("?", 1)[0] not in self.allowed:

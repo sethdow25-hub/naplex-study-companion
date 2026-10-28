@@ -44,5 +44,5 @@ for(const [i,w] of data.entries()){
 assert.equal(total,237);
 const manifest=JSON.parse(fs.readFileSync(require('node:path').join(dir,'manifest.webmanifest'),'utf8'));
 for(const icon of manifest.icons) assert.ok(fs.existsSync(require('node:path').join(dir,icon.src)));
-for(const file of ['index.html','styles.css','app.js','content.js','extra-content.js','audit-data.js','content-audit.md','practice-core.js','sw.js']) assert.ok(fs.statSync(require('node:path').join(dir,file)).size>0);
+for(const file of ['index.html','styles.css','app.js','content.js','extra-content.js','audit-data.js','content-audit.md','practice-core.js','sync-core.js','focus-core.js','sync.js','sw.js']) assert.ok(fs.statSync(require('node:path').join(dir,file)).size>0);
 console.log('Validated 12 weeks, 60 mapped lessons, 12 medication-use focus sections, 237 questions and their source records, 12 worked calculations, and PWA assets.');

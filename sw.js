@@ -1,5 +1,5 @@
-const CACHE = 'naplex-study-v5';
-const FILES = ['./', './index.html', './styles.css', './content.js', './extra-content.js', './audit-data.js', './content-audit.md', './practice-core.js', './app.js', './sync-core.js', './sync.js', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png'];
+const CACHE = 'naplex-study-v6';
+const FILES = ['./', './index.html', './styles.css', './content.js', './extra-content.js', './audit-data.js', './content-audit.md', './practice-core.js', './app.js', './sync-core.js', './focus-core.js', './sync.js', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png'];
 const FIREBASE_FILES = ['firebase-app.js','firebase-auth.js','firebase-firestore.js'].map(file => 'https://www.gstatic.com/firebasejs/11.10.0/' + file);
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(async cache => {
   await cache.addAll(FILES);

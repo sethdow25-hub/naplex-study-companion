@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const Core = window.NaplexSyncCore;
+  const Focus = window.NaplexFocusCore;
   const GUEST_KEY = 'naplex-study-companion-v1';
   const ACCOUNT_PREFIX = 'naplex-study-companion-account-v2:';
   // Firebase's browser configuration identifies the project; it is not an admin credential.
@@ -17,6 +18,8 @@
     'tab-' + Date.now() + '-' + Math.random().toString(36).slice(2));
   let auth, db, fbAuth, fbDb, user = null, records = {}, clock = 0, unsubscribe = null;
   let generation = 0, pendingTimer = null, flushing = false, flushAgain = false, remoteReady = false;
+  let focusScores = {}, focusUnsubscribe = null, focusTimer = null, focusFlushing = false;
+  let focusAgain = false, focusReady = false, mainPending = false, focusPending = false;
   let callback = () => {}, currentStatus = 'Preparing sync…', readyPromise;
 
   function read(key, fallback) {
@@ -31,10 +34,11 @@
   function guestHasData() {
     const g = guestState();
     return !!(g.examDate || Object.keys(g.days || {}).some(k => g.days[k]) ||
-      Object.keys(g.lessons || {}).some(k => g.lessons[k]) || Object.keys(g.scores || {}).length ||
+      Object.keys(g.lessons || {}).some(k => g.lessons[k]) || Object.keys(g.scores || {}).length || Object.keys(Focus.clean(g.focusScores)).length ||
       Object.values(g.notes || {}).some(Boolean));
   }
   function accountKey() { return ACCOUNT_PREFIX + user.uid; }
+  function focusKey() { return accountKey() + ':medication-scores'; }
   function persist() {
     if (user && !write(accountKey(), {records, clock})) {
       status('This browser could not save progress on this device. Export a backup and check your browser storage.');
@@ -42,11 +46,29 @@
     }
     return true;
   }
-  function notifyData() { callback({type:'data', state:Core.project(records)}); }
+  function persistFocus() {
+    if (user && !write(focusKey(), focusScores)) {
+      status('This browser could not save progress on this device. Export a backup and check your browser storage.');
+      return false;
+    }
+    return true;
+  }
+  function projectedState() { return {...Core.project(records), focusScores:Focus.clean(focusScores)}; }
+  function notifyData() { callback({type:'data', state:projectedState()}); }
+  function showSyncedIfReady() {
+    if (!user) return;
+    if (!navigator.onLine) return status('Offline — changes stay on this device until you reconnect.');
+    if (mainPending || focusPending || flushing || focusFlushing) return status('Saving your progress…');
+    if (remoteReady && focusReady) status('Progress is synced.');
+    else status('Connecting your account…');
+  }
   function importGuest() {
-    if (!user || !remoteReady || !guestHasData()) return false;
-    save(Core.combineGuest(Core.project(records), guestState()));
+    if (!user || !remoteReady || !focusReady || !guestHasData()) return false;
+    const guest = guestState(), combined = Core.combineGuest(projectedState(), guest);
+    combined.focusScores = Focus.merge(focusScores, guest.focusScores);
+    save(combined);
     try { localStorage.setItem(accountKey() + ':guest-imported', '1'); } catch {}
+    notifyData();
     callback({type:'imported'});
     return true;
   }
@@ -56,6 +78,7 @@
   }
   function schedule(delay = 1200) {
     if (!user) return;
+    mainPending = true;
     if (!navigator.onLine) { status('Offline — changes are saved on this device and will sync when you reconnect.'); return; }
     if (flushing) { flushAgain = true; return; }
     clearTimeout(pendingTimer);
@@ -63,6 +86,7 @@
     status('Saving your progress…');
   }
   async function flush() {
+    pendingTimer = null;
     if (!user || !db) return;
     if (!navigator.onLine) { status('Offline — changes are saved on this device and will sync when you reconnect.'); return; }
     if (flushing) { flushAgain = true; return; }
@@ -85,7 +109,7 @@
       persist();
       if (changed) notifyData();
       if (!Core.sameRecords(records, saved)) flushAgain = true;
-      status(flushAgain ? 'Saving your progress…' : 'Progress is synced.');
+      mainPending = flushAgain;
     } catch (error) {
       if (run !== generation) return;
       if (!navigator.onLine || error.code === 'unavailable' || error.code === 'deadline-exceeded') {
@@ -95,14 +119,70 @@
       }
       flushAgain = true;
     } finally {
+      if (run !== generation || !user || user.uid !== uid) return;
       flushing = false;
       if (flushAgain && user) schedule(run === generation ? 10000 : 100);
+      else showSyncedIfReady();
+    }
+  }
+  function scheduleFocus(delay = 1200) {
+    if (!user || !focusPending) return;
+    if (!navigator.onLine) { status('Offline — changes are saved on this device and will sync when you reconnect.'); return; }
+    if (focusFlushing) { focusAgain = true; return; }
+    clearTimeout(focusTimer);
+    focusTimer = setTimeout(flushFocus, delay);
+    status('Saving your progress…');
+  }
+  async function flushFocus() {
+    focusTimer = null;
+    if (!user || !db || !focusPending) return;
+    if (!navigator.onLine) { status('Offline — changes are saved on this device and will sync when you reconnect.'); return; }
+    if (focusFlushing) { focusAgain = true; return; }
+    const run = generation, uid = user.uid, snapshot = Focus.clean(focusScores);
+    const ref = fbDb.doc(db, 'medicationScores', uid);
+    focusFlushing = true; focusAgain = false;
+    try {
+      const saved = await fbDb.runTransaction(db, async transaction => {
+        const document = await transaction.get(ref);
+        const remote = document.exists() ? document.data().scores : {};
+        const merged = Focus.merge(remote, snapshot);
+        transaction.set(ref, {version:1, scores:merged});
+        return merged;
+      });
+      if (run !== generation || !user || user.uid !== uid) return;
+      const merged = Focus.merge(focusScores, saved);
+      const changed = !Focus.same(focusScores, merged);
+      focusScores = merged;
+      persistFocus();
+      if (changed) notifyData();
+      focusPending = !Focus.same(focusScores, saved);
+      if (focusPending) focusAgain = true;
+    } catch (error) {
+      if (run !== generation) return;
+      focusPending = true; focusAgain = true;
+      if (!navigator.onLine || error.code === 'unavailable' || error.code === 'deadline-exceeded') {
+        status('Waiting for a connection — your changes remain on this device.');
+      } else {
+        status('Sync could not complete. Your changes remain on this device; check your connection or export a backup.');
+      }
+    } finally {
+      if (run !== generation || !user || user.uid !== uid) return;
+      focusFlushing = false;
+      if (focusAgain && focusPending) scheduleFocus(10000);
+      else showSyncedIfReady();
     }
   }
   function save(state) {
     if (!user) {
       if (!write(GUEST_KEY, state)) status('This browser could not save progress. Check browser storage or export a backup.');
       return;
+    }
+    const mergedFocus = Focus.merge(focusScores, state.focusScores);
+    if (!Focus.same(focusScores, mergedFocus)) {
+      focusScores = mergedFocus;
+      persistFocus();
+      focusPending = true;
+      scheduleFocus();
     }
     const changed = Core.recordChanges(records, state, device, clock);
     if (Core.sameRecords(records, changed.records)) return;
@@ -113,8 +193,12 @@
   function changeUser(next) {
     generation++;
     clearTimeout(pendingTimer);
+    clearTimeout(focusTimer);
     if (unsubscribe) { unsubscribe(); unsubscribe = null; }
-    user = next || null; records = {}; clock = 0; flushAgain = false; remoteReady = false;
+    if (focusUnsubscribe) { focusUnsubscribe(); focusUnsubscribe = null; }
+    user = next || null; records = {}; focusScores = {}; clock = 0;
+    flushAgain = false; remoteReady = false; focusAgain = false; focusReady = false;
+    flushing = false; focusFlushing = false; mainPending = false; focusPending = false;
     if (!user) {
       currentStatus = 'Studying on this device. Sign in to sync.';
       callback({type:'user', state:guestState()});
@@ -122,9 +206,10 @@
     }
     const cache = read(accountKey(), {});
     records = Core.cleanRecords(cache.records);
+    focusScores = Focus.clean(read(focusKey(), {}));
     clock = Math.max(Number.isSafeInteger(cache.clock) ? cache.clock : 0, ...Object.values(records).map(r => r.n), 0);
     currentStatus = navigator.onLine ? 'Connecting your account…' : 'Offline — changes stay on this device until you reconnect.';
-    callback({type:'user', state:Core.project(records)});
+    callback({type:'user', state:projectedState()});
     const run = generation;
     const ref = fbDb.doc(db, 'progress', user.uid);
     unsubscribe = fbDb.onSnapshot(ref, {includeMetadataChanges:true}, snapshot => {
@@ -137,7 +222,22 @@
       persist();
       if (changed) notifyData();
       if (!Core.sameRecords(records, remote)) schedule();
-      else if (!snapshot.metadata.fromCache) status('Progress is synced.');
+      else if (!snapshot.metadata.fromCache) { if (!flushing) mainPending = false; showSyncedIfReady(); }
+      else if (!navigator.onLine) status('Offline — changes stay on this device until you reconnect.');
+    }, () => {
+      if (run === generation) status('Could not connect to your account. Your progress remains on this device.');
+    });
+    const focusRef = fbDb.doc(db, 'medicationScores', user.uid);
+    focusUnsubscribe = fbDb.onSnapshot(focusRef, {includeMetadataChanges:true}, snapshot => {
+      if (run !== generation) return;
+      if (!snapshot.metadata.fromCache) focusReady = true;
+      const remote = Focus.clean(snapshot.exists() ? snapshot.data().scores : {});
+      const merged = Focus.merge(focusScores, remote), changed = !Focus.same(focusScores, merged);
+      focusScores = merged;
+      persistFocus();
+      if (changed) notifyData();
+      if (!Focus.same(focusScores, remote)) { focusPending = true; scheduleFocus(); }
+      else if (!snapshot.metadata.fromCache) { if (!focusFlushing) focusPending = false; showSyncedIfReady(); }
       else if (!navigator.onLine) status('Offline — changes stay on this device until you reconnect.');
     }, () => {
       if (run === generation) status('Could not connect to your account. Your progress remains on this device.');
@@ -204,13 +304,13 @@
     };
     return messages[error.code] || (error.message && !error.code ? error.message : 'Could not complete that request. Please try again.');
   }
-  window.addEventListener('online', () => { if (user) schedule(100); });
+  window.addEventListener('online', () => { if (user) { schedule(100); scheduleFocus(100); } });
   window.addEventListener('offline', () => { if (user) status('Offline — changes stay on this device until you reconnect.'); });
-  document.addEventListener('visibilitychange', () => { if (!document.hidden && user && navigator.onLine) schedule(300); });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && user && navigator.onLine) { schedule(300); scheduleFocus(300); } });
   window.NaplexSync = {
     init, save, signIn, createAccount, resetPassword, signOut, importGuest, canImportGuest,
-    syncNow: () => schedule(10),
-    info: () => ({email:user && user.email, signedIn:!!user, status:currentStatus, remoteReady, secure:window.isSecureContext}),
+    syncNow: () => { schedule(10); scheduleFocus(10); },
+    info: () => ({email:user && user.email, signedIn:!!user, status:currentStatus, remoteReady:remoteReady && focusReady, secure:window.isSecureContext}),
     describeError
   };
 })();
