@@ -89,13 +89,9 @@ for(const w of data){
   assert.equal(medication.questions[w.n].length,4);
   for(const q0 of medication.questions[w.n]){
     const q=JSON.parse(JSON.stringify(q0));
-    if(q.calcExpected!==undefined){
-      assert.equal(Number(q.options[q.correct].match(/\d+(?:\.\d+)?/)[0]),q.calcExpected,'Medication-order quantity calculation');
-      assert.equal(q.calcExpected,1*2*30,'Independent quantity check');
-    }
     assert.ok(q.sourceIds.length && q.sourceIds.every(id=>sources[id]));
     q.audit={id:`W${String(w.n).padStart(2,'0')}-Q${String(w.questions.length+1).padStart(2,'0')}`,blueprint:q.blueprint,sourceIds:q.sourceIds,kind:q.reviewKind,checked:'2026-10-28'};
-    delete q.blueprint;delete q.sourceIds;delete q.reviewKind;delete q.calcExpected;
+    delete q.blueprint;delete q.sourceIds;delete q.reviewKind;
     w.questions.push(q);
   }
   const answerText=w.math.answer;

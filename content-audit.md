@@ -1777,11 +1777,11 @@ Review: AI-assisted source check; independent pharmacist review pending. Checked
 Sources: [FDA: iPLEDGE REMS](https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/ipledge-risk-evaluation-and-mitigation-strategy-rems) — Current restricted-distribution program information.
 
 **W11-Q20 — NABP 2.C.5**  
-A vaccine recipient has a concerning event after vaccination, but the cause is uncertain. Which statement is correct?  
-Answer: VAERS accepts reports even when the reporter is unsure of causation  
-Explanation: VAERS accepts reports even when causation is uncertain. Certain events have mandatory reporting requirements.  
+A person reports mild soreness at the injection site after vaccination. Which statement is most appropriate?  
+Answer: Local soreness can occur; assess severity and follow product-specific guidance  
+Explanation: Local injection-site reactions can occur after vaccination. Assess symptoms in context and follow product-specific guidance.  
 Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
-Sources: [CDC: vaccine adverse event reporting](https://www.cdc.gov/vaccine-safety-systems/vaers/) — Reports may be submitted even when causation is uncertain.
+Sources: [CDC: vaccine adverse reactions](https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-2-general-best-practice-guidance.html) — Local reactions and distinction from adverse events.
 
 **W11-Q21 — NABP 2.D**  
 A pharmacy learns about a drug recall. How should it determine whether a stocked bottle is affected?  
@@ -1912,11 +1912,11 @@ Review: AI-assisted source check; independent pharmacist review pending. Checked
 Sources: [AHRQ: medication reconciliation](https://psnet.ahrq.gov/primer/medication-reconciliation) — Medication discrepancies and reconciliation.
 
 **W12-Q17 — NABP 2.A.2**  
-An order is for one tablet twice daily for 30 days. Which quantity supplies the stated course?  
-Answer: 60 tablets  
-Explanation: One tablet × two doses per day × 30 days = 60 tablets. This verifies quantity only, not clinical appropriateness.  
-Review: Arithmetic independently checked; no clinical dosing validation. Checked 2026-10-28.  
-Sources: [OpenStax: dosage calculations](https://openstax.org/books/pharmacology/pages/2-4-dosage-calculations) — Dimensional analysis and dosage calculations.
+A prescription says one tablet daily, but the prepared label says one tablet twice daily. What is the best next step?  
+Answer: Verify the order and correct the label before dispensing  
+Explanation: The prepared directions must match the verified order. Resolve the discrepancy before the medication is dispensed.  
+Review: AI-assisted source check; independent pharmacist review pending. Checked 2026-10-28.  
+Sources: [AHRQ: medication reconciliation](https://psnet.ahrq.gov/primer/medication-reconciliation) — Medication discrepancies and reconciliation; [FDA: prescription drug labeling](https://www.fda.gov/drugs/fdas-labeling-resources-human-prescription-drugs/frequently-asked-questions-about-labeling-prescription-medicines) — Prescribing information and safety sections.
 
 **W12-Q18 — NABP 2.B**  
 The pharmacy is considering a generic substitution. Which combination should be verified?  
